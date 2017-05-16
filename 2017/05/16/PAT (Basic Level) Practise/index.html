@@ -1,0 +1,1166 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="PAT," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="以下标题均来自本篇博客的视角₍₍(´ ▿` ∗)⁾⁾ ☞ 我是谁？以下是目前为止我做出来的PAT乙级真题及训练集中的题目，优先使用Java（我的老本行233，虽然老是超时(ಗ ‸ ಗ )…但我还是爱它的(♡´ ˘ `♡)～），如果用Java一直超时的话或者是顺手的话也会用C或者是C++，所以每一种解法都并不是很全。 ☞ 我要干什么？由于本人只是一只小菜鸟，对于各种经典算法也知之甚少，《算法》（第四">
+<meta name="keywords" content="PAT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PAT (Basic Level) Practise">
+<meta property="og:url" content="https://lwxwl.github.io/2017/05/16/PAT (Basic Level) Practise/index.html">
+<meta property="og:site_name" content="lwxwl&#39;s blog">
+<meta property="og:description" content="以下标题均来自本篇博客的视角₍₍(´ ▿` ∗)⁾⁾ ☞ 我是谁？以下是目前为止我做出来的PAT乙级真题及训练集中的题目，优先使用Java（我的老本行233，虽然老是超时(ಗ ‸ ಗ )…但我还是爱它的(♡´ ˘ `♡)～），如果用Java一直超时的话或者是顺手的话也会用C或者是C++，所以每一种解法都并不是很全。 ☞ 我要干什么？由于本人只是一只小菜鸟，对于各种经典算法也知之甚少，《算法》（第四">
+<meta property="og:updated_time" content="2017-05-16T16:25:25.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PAT (Basic Level) Practise">
+<meta name="twitter:description" content="以下标题均来自本篇博客的视角₍₍(´ ▿` ∗)⁾⁾ ☞ 我是谁？以下是目前为止我做出来的PAT乙级真题及训练集中的题目，优先使用Java（我的老本行233，虽然老是超时(ಗ ‸ ಗ )…但我还是爱它的(♡´ ˘ `♡)～），如果用Java一直超时的话或者是顺手的话也会用C或者是C++，所以每一种解法都并不是很全。 ☞ 我要干什么？由于本人只是一只小菜鸟，对于各种经典算法也知之甚少，《算法》（第四">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://lwxwl.github.io/2017/05/16/PAT (Basic Level) Practise/"/>
+
+
+
+
+
+  <title>PAT (Basic Level) Practise | lwxwl's blog</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">lwxwl's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">To Be A Better Man</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://lwxwl.github.io/2017/05/16/PAT (Basic Level) Practise/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lwxwl">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lwxwl's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">PAT (Basic Level) Practise</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-16T00:00:00+08:00">
+                2017-05-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>以下标题均来自本篇博客的视角₍₍(´ ▿` ∗)⁾⁾</p>
+<h2 id="☞-我是谁？"><a href="#☞-我是谁？" class="headerlink" title="☞ 我是谁？"></a>☞ 我是谁？</h2><p>以下是目前为止我做出来的<a href="https://www.patest.cn/contests/pat-b-practise" target="_blank" rel="external">PAT乙级真题及训练集</a>中的题目，优先使用Java（我的老本行233，虽然老是超时(ಗ ‸ ಗ )…但我还是爱它的(♡´ ˘ `♡)～），如果用Java一直超时的话或者是顺手的话也会用C或者是C++，所以每一种解法都并不是很全。</p>
+<h2 id="☞-我要干什么？"><a href="#☞-我要干什么？" class="headerlink" title="☞ 我要干什么？"></a>☞ 我要干什么？</h2><p>由于本人只是一只小菜鸟，对于各种经典算法也知之甚少，《算法》（第四版）也 <del>才看不久</del> 刚开始看，于是乎…以下的解法可能 <del>并不是太好</del> 很烂，有的也是向大佬请教之后才写出来的。所以…如果看到了有问题的地方欢迎戳我☞ ☞ ☞ (´・◡・｀)，我会好好改正。</p>
+<p>那么，问题来了…</p>
+<p>既然我这么渣，为什么这篇博客还会存活于世呢？</p>
+<p>当然是为了监督自己啦(。◕‿-)，不希望自己从刷题到放弃，所以就算技术渣也还是要好好的坚持下去（　´Д｀）=3</p>
+<h2 id="☞-说正事专用标题"><a href="#☞-说正事专用标题" class="headerlink" title="☞ 说正事专用标题"></a>☞ 说正事专用标题</h2><p>如果你有不一样的解题思路或者是不一样的想法的话，都可以和我讨论。我的邮箱：673834671@qq.com</p>
+<p>嗯，被超时困扰很久很久了，求指导…</p>
+<h2 id="☞-接下来是真正的题解了"><a href="#☞-接下来是真正的题解了" class="headerlink" title="☞ 接下来是真正的题解了"></a>☞ 接下来是真正的题解了</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">标号</th>
+<th style="text-align:center">标题</th>
+<th style="text-align:center">Java题解</th>
+<th style="text-align:center">C/ C++题解</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1001</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1001" target="_blank" rel="external">害死人不偿命的(3n+1)猜想</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1001.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"><a href="http://github.com/lwxwl/PAT/blob/master/C(C%2B%2B)/1001.c" target="_blank" rel="external">查看题解</a></td>
+</tr>
+<tr>
+<td style="text-align:center">1002</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1002" target="_blank" rel="external">写出这个数</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1002.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1003</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1003" target="_blank" rel="external">我要通过!</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1003.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1004</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1004" target="_blank" rel="external">成绩排名</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1004.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"><a href="http://github.com/lwxwl/PAT/blob/master/C(C%2B%2B)/1004.cpp" target="_blank" rel="external">查看题解</a></td>
+</tr>
+<tr>
+<td style="text-align:center">1005</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1005" target="_blank" rel="external">继续(3n+1)猜想</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1005.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1006</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1006" target="_blank" rel="external">换个格式输出整数</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1006.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"><a href="http://github.com/lwxwl/PAT/blob/master/C(C%2B%2B)/1006.cpp" target="_blank" rel="external">查看题解</a></td>
+</tr>
+<tr>
+<td style="text-align:center">1007</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1007" target="_blank" rel="external">素数对猜想</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1007.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1008</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1008" target="_blank" rel="external">数组元素循环右移问题</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1008.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1009</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1009" target="_blank" rel="external">说反话 </a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1009.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1010</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1010" target="_blank" rel="external">    一元多项式求导</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1010.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1011</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1011" target="_blank" rel="external">A+B和C</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1011.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1012</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1012" target="_blank" rel="external">数字分类</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1012.java" target="_blank" rel="external"><font color="#750000">运行超时</font></a></td>
+<td style="text-align:center"><a href="http://github.com/lwxwl/PAT/blob/master/C(C%2B%2B)/1012.c" target="_blank" rel="external">查看题解</a></td>
+</tr>
+<tr>
+<td style="text-align:center">1013</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1013" target="_blank" rel="external">数素数</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1013.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"><a href="http://github.com/lwxwl/PAT/blob/master/C(C%2B%2B)/1013.c" target="_blank" rel="external">查看题解</a></td>
+</tr>
+<tr>
+<td style="text-align:center">1014</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1014" target="_blank" rel="external">    福尔摩斯的约会</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1014.java" target="_blank" rel="external"><font color="#750000">运行超时</font></a></td>
+<td style="text-align:center"><a href="http://github.com/lwxwl/PAT/blob/master/C(C%2B%2B)/1014.c" target="_blank" rel="external">查看题解</a></td>
+</tr>
+<tr>
+<td style="text-align:center">1015</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1015" target="_blank" rel="external">德才论</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1015.java" target="_blank" rel="external"><font color="#750000">运行超时</font></a></td>
+<td style="text-align:center"><a href="http://github.com/lwxwl/PAT/blob/master/C(C%2B%2B)/1015.cpp" target="_blank" rel="external">查看题解</a></td>
+</tr>
+<tr>
+<td style="text-align:center">1016</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1016" target="_blank" rel="external">部分A+B</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1016.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1017</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1017" target="_blank" rel="external">A除以B</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1017.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1018</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1018" target="_blank" rel="external">锤子剪刀布</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1018.java" target="_blank" rel="external"><font color="#750000">运行超时</font></a></td>
+<td style="text-align:center"><a href="http://github.com/lwxwl/PAT/blob/master/C(C%2B%2B)/1018.cpp" target="_blank" rel="external">查看题解</a></td>
+</tr>
+<tr>
+<td style="text-align:center">1019</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1019" target="_blank" rel="external">数字黑洞</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1019.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1020</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1020" target="_blank" rel="external">月饼</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1020.java" target="_blank" rel="external"><font color="#750000">运行超时</font></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1021</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1021" target="_blank" rel="external">个位数统计</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1021.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"><a href="http://github.com/lwxwl/PAT/blob/master/C(C%2B%2B)/1021.cpp" target="_blank" rel="external">查看题解</a></td>
+</tr>
+<tr>
+<td style="text-align:center">1022</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1022" target="_blank" rel="external">D进制的A+B</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1022.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"><a href="http://github.com/lwxwl/PAT/blob/master/C(C%2B%2B)/1022.cpp" target="_blank" rel="external">查看题解</a></td>
+</tr>
+<tr>
+<td style="text-align:center">1023</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1023" target="_blank" rel="external">组个最小数</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1023.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1024</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1024" target="_blank" rel="external">科学计数法</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1024.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"><a href="http://github.com/lwxwl/PAT/blob/master/C(C%2B%2B)/1024.cpp" target="_blank" rel="external">查看题解</a></td>
+</tr>
+<tr>
+<td style="text-align:center">1025</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1025" target="_blank" rel="external">反转链表</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><a href="http://github.com/lwxwl/PAT/blob/master/C(C%2B%2B)/1025.cpp" target="_blank" rel="external">查看题解</a></td>
+</tr>
+<tr>
+<td style="text-align:center">1026</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1026" target="_blank" rel="external">程序运行时间</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1026.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"><a href="http://github.com/lwxwl/PAT/blob/master/C(C%2B%2B)/1026.cpp" target="_blank" rel="external">查看题解</a></td>
+</tr>
+<tr>
+<td style="text-align:center">1027</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1027" target="_blank" rel="external">打印沙漏</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1027.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1028</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1028" target="_blank" rel="external">人口普查</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><a href="http://github.com/lwxwl/PAT/blob/master/C(C%2B%2B)/1028.cpp" target="_blank" rel="external">查看题解</a></td>
+</tr>
+<tr>
+<td style="text-align:center">1029</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1029" target="_blank" rel="external">旧键盘</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1029.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1030</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1030" target="_blank" rel="external">完美数列</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1030.java" target="_blank" rel="external"><font color="#750000">运行超时</font></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1031</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1031" target="_blank" rel="external">查验身份证</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1031.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1032</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1032" target="_blank" rel="external">挖掘机技术哪家强</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1032.java" target="_blank" rel="external"><font color="#750000">运行超时</font></a></td>
+<td style="text-align:center"><a href="http://github.com/lwxwl/PAT/blob/master/C(C%2B%2B)/1032.cpp" target="_blank" rel="external">查看题解</a></td>
+</tr>
+<tr>
+<td style="text-align:center">1033</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1033" target="_blank" rel="external">旧键盘打字</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1033.java" target="_blank" rel="external"><font color="#750000">运行超时</font></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1034</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1034" target="_blank" rel="external">有理数四则运算</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1034.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1035</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1035" target="_blank" rel="external">插入与归并</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1036</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1036" target="_blank" rel="external">跟奥巴马一起编程</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1036.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1037</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1037" target="_blank" rel="external">在霍格沃茨找零钱</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1037.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1038</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1038" target="_blank" rel="external">统计同成绩学生</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1038.java" target="_blank" rel="external"><font color="#750000">运行超时</font></a></td>
+<td style="text-align:center"><a href="http://github.com/lwxwl/PAT/blob/master/C(C%2B%2B)/1038.cpp" target="_blank" rel="external">查看题解</a></td>
+</tr>
+<tr>
+<td style="text-align:center">1039</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1039" target="_blank" rel="external">到底买不买</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1040</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1040" target="_blank" rel="external">有几个PAT</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><a href="http://github.com/lwxwl/PAT/blob/master/C(C%2B%2B)/1040.cpp" target="_blank" rel="external">查看题解</a></td>
+</tr>
+<tr>
+<td style="text-align:center">1041</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1041" target="_blank" rel="external">考试座位号</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1041.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1042</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1042" target="_blank" rel="external">字符统计</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1042.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1043</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1043" target="_blank" rel="external">输出PATest</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1043.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"><a href="http://github.com/lwxwl/PAT/blob/master/C(C%2B%2B)/1043.cpp" target="_blank" rel="external">查看题解</a></td>
+</tr>
+<tr>
+<td style="text-align:center">1044</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1044" target="_blank" rel="external">火星数字</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1044.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1045</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1045" target="_blank" rel="external">快速排序</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1045.java" target="_blank" rel="external"><font color="#750000">运行超时</font></a></td>
+<td style="text-align:center"><a href="http://github.com/lwxwl/PAT/blob/master/C(C%2B%2B)/1045.cpp" target="_blank" rel="external">查看题解</a></td>
+</tr>
+<tr>
+<td style="text-align:center">1046</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1046" target="_blank" rel="external">划拳</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1046.java" target="_blank" rel="external">查看题解</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1047</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1047" target="_blank" rel="external">编程团体赛</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1047.java" target="_blank" rel="external"><font color="#750000">运行超时</font></a></td>
+<td style="text-align:center"><a href="http://github.com/lwxwl/PAT/blob/master/C(C%2B%2B)/1047.cpp" target="_blank" rel="external">查看题解</a></td>
+</tr>
+<tr>
+<td style="text-align:center">1048</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1048" target="_blank" rel="external">数字加密</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1049</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1049" target="_blank" rel="external">数列的片段和</a></td>
+<td style="text-align:center"><a href="https://github.com/lwxwl/PAT/blob/master/Java/src/basicLevel1049.java" target="_blank" rel="external"><font color="#750000">运行超时</font></a></td>
+<td style="text-align:center"><a href="http://github.com/lwxwl/PAT/blob/master/C(C%2B%2B)/1049.cpp" target="_blank" rel="external">查看题解</a></td>
+</tr>
+<tr>
+<td style="text-align:center">1050</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1050" target="_blank" rel="external">螺旋矩阵</a></td>
+<td style="text-align:center"><a href=""></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1051</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1051" target="_blank" rel="external">复数乘法</a></td>
+<td style="text-align:center"><a href=""></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1052</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1052" target="_blank" rel="external">卖个萌</a></td>
+<td style="text-align:center"><a href=""></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1053</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1053" target="_blank" rel="external">住房空置率</a></td>
+<td style="text-align:center"><a href=""></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1054</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1054" target="_blank" rel="external">求平均值</a></td>
+<td style="text-align:center"><a href=""></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1055</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1055" target="_blank" rel="external">集体照</a></td>
+<td style="text-align:center"><a href=""></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1056</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1056" target="_blank" rel="external">组合数的和</a></td>
+<td style="text-align:center"><a href=""></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1057</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1057" target="_blank" rel="external">数零壹</a></td>
+<td style="text-align:center"><a href=""></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1058</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1058" target="_blank" rel="external">选择题</a></td>
+<td style="text-align:center"><a href=""></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1059</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1059" target="_blank" rel="external">C语言竞赛</a></td>
+<td style="text-align:center"><a href=""></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1060</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1060" target="_blank" rel="external">爱丁顿数</a></td>
+<td style="text-align:center"><a href=""></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1061</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1061" target="_blank" rel="external">判断题</a></td>
+<td style="text-align:center"><a href=""></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1062</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1062" target="_blank" rel="external">最简分数</a></td>
+<td style="text-align:center"><a href=""></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1063</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1063" target="_blank" rel="external">计算谱半径</a></td>
+<td style="text-align:center"><a href=""></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1064</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1064" target="_blank" rel="external">朋友数</a></td>
+<td style="text-align:center"><a href=""></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1065</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1065" target="_blank" rel="external">单身狗</a></td>
+<td style="text-align:center"><a href=""></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1066</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1066" target="_blank" rel="external">图像过滤</a></td>
+<td style="text-align:center"><a href=""></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1067</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1067" target="_blank" rel="external">试密码</a></td>
+<td style="text-align:center"><a href=""></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1068</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1068" target="_blank" rel="external">万绿丛中一点红</a></td>
+<td style="text-align:center"><a href=""></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1069</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1069" target="_blank" rel="external">微博转发抽奖</a></td>
+<td style="text-align:center"><a href=""></a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1070</td>
+<td style="text-align:center"><a href="https://www.patest.cn/contests/pat-b-practise/1070" target="_blank" rel="external">结绳</a></td>
+<td style="text-align:center"><a href=""></a></td>
+<td style="text-align:center"><a href=""></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="☞-未完待续"><a href="#☞-未完待续" class="headerlink" title="☞ 未完待续"></a>☞ 未完待续</h2><p>很明显还有好多留白，而且博客也很不完善，只是丢了个链接……我真的是太菜了づ﹏ど</p>
+<hr>
+<p><strong>立个flag</strong>   ☞ 这个学期把乙级刷完，然后做个总结（逃…</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PAT/" rel="tag"># PAT</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/15/Hexo博客搭建(Mac)/" rel="next" title="Hexo博客搭建(Mac)">
+                <i class="fa fa-chevron-left"></i> Hexo博客搭建(Mac)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="lwxwl" />
+          <p class="site-author-name" itemprop="name">lwxwl</p>
+           
+              <p class="site-description motion-element" itemprop="description">好好学习，天天向上(๑•̀ㅂ•́)و✧</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lwxwl" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/_lwxwl_" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://m.weibo.cn/u/5318684652" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#☞-我是谁？"><span class="nav-number">1.</span> <span class="nav-text">☞ 我是谁？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#☞-我要干什么？"><span class="nav-number">2.</span> <span class="nav-text">☞ 我要干什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#☞-说正事专用标题"><span class="nav-number">3.</span> <span class="nav-text">☞ 说正事专用标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#☞-接下来是真正的题解了"><span class="nav-number">4.</span> <span class="nav-text">☞ 接下来是真正的题解了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#☞-未完待续"><span class="nav-number">5.</span> <span class="nav-text">☞ 未完待续</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lwxwl</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+<script type="text/javascript" color="176,23,31" opacity='1' zIndex="-1" count="66" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+
+</body>
+</html>
