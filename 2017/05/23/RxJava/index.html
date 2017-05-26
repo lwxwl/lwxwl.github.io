@@ -98,7 +98,7 @@
 <meta property="og:site_name" content="lwxwl&#39;s blog">
 <meta property="og:description" content="嗯,今天看RxJava又发现自己有好多东西都不懂，慢慢了解吧९(།︵།)و ReactiveX（简称Rx）Reactive官网 Reactive翻译文档 一下是截取的一些要点： Rx是一个使用可观察数据流进行异步编程的编程接口，结合了观察者模式、迭代器模式和函数式编程的特点。  观察者模式 迭代器模式 函数式编程  微软给的定义是：Rx是一个函数库，让开发者可以利用可观察序列和LINQ风格查询操作">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006HJ39wgy1ffvmbp2364j30gn04qaad.jpg">
-<meta property="og:updated_time" content="2017-05-24T16:54:42.000Z">
+<meta property="og:updated_time" content="2017-05-26T08:34:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RxJava">
 <meta name="twitter:description" content="嗯,今天看RxJava又发现自己有好多东西都不懂，慢慢了解吧९(།︵།)و ReactiveX（简称Rx）Reactive官网 Reactive翻译文档 一下是截取的一些要点： Rx是一个使用可观察数据流进行异步编程的编程接口，结合了观察者模式、迭代器模式和函数式编程的特点。  观察者模式 迭代器模式 函数式编程  微软给的定义是：Rx是一个函数库，让开发者可以利用可观察序列和LINQ风格查询操作">
@@ -546,6 +546,12 @@
 </ul>
 <p>举个例子：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Observable.just(1, 2, 3, 4)</div><div class="line">    // 指定 subscribe() 发生在 IO 线程</div><div class="line">    .subscribeOn(Schedulers.io()) </div><div class="line">    // 指定 Subscriber 的回调发生在主线程</div><div class="line">    .observeOn(AndroidSchedulers.mainThread()) </div><div class="line">    .subscribe(new Action1&lt;Integer&gt;() &#123;</div><div class="line">        @Override</div><div class="line">        public void call(Integer number) &#123;</div><div class="line">            Log.d(tag, &quot;number:&quot; + number);</div><div class="line">        &#125;</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p>差不多基本的了解就是上面那些了，然后接下来就要开始实践了。</p>
+<p>以上内容是学习的这些文档：</p>
+<p><a href="https://github.com/ReactiveX/RxJava" target="_blank" rel="external">Github</a></p>
+<p><a href="https://gank.io/post/560e15be2dca930e00da1083#toc_2" target="_blank" rel="external">给 Android 开发者的 RxJava 详解</a></p>
+<p>还有的上文已经列出，就不加以赘述了。</p>
+<p>除此之外，还有一篇写得很棒的对<code>Subscription</code>解读的文章：<a href="http://www.jianshu.com/p/4b2b1228fa0a" target="_blank" rel="external">关于RxJava1中的Subscription的一些误解</a>，RxJava2也是参考的该作者的系列文章学习的。</p>
 
       
     </div>
@@ -745,7 +751,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ReactiveX（简称Rx）"><span class="nav-number">1.</span> <span class="nav-text">ReactiveX（简称Rx）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Rx模式"><span class="nav-number">2.</span> <span class="nav-text">Rx模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RxJava的观察者模式"><span class="nav-number">3.</span> <span class="nav-text">RxJava的观察者模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RxJava的基本实现"><span class="nav-number">4.</span> <span class="nav-text">RxJava的基本实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Action"><span class="nav-number">5.</span> <span class="nav-text">Action</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map、flatMap转换"><span class="nav-number">6.</span> <span class="nav-text">map、flatMap转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scheduler"><span class="nav-number">7.</span> <span class="nav-text">Scheduler</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ReactiveX（简称Rx）"><span class="nav-number">1.</span> <span class="nav-text">ReactiveX（简称Rx）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Rx模式"><span class="nav-number">2.</span> <span class="nav-text">Rx模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RxJava的观察者模式"><span class="nav-number">3.</span> <span class="nav-text">RxJava的观察者模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RxJava的基本实现"><span class="nav-number">4.</span> <span class="nav-text">RxJava的基本实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Action"><span class="nav-number">5.</span> <span class="nav-text">Action</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map、flatMap转换"><span class="nav-number">6.</span> <span class="nav-text">map、flatMap转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scheduler"><span class="nav-number">7.</span> <span class="nav-text">Scheduler</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关链接"><span class="nav-number">8.</span> <span class="nav-text">相关链接</span></a></li></ol></div>
             
 
           </div>
