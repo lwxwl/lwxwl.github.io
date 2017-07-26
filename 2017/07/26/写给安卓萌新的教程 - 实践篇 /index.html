@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="读书笔记," />
+  <meta name="keywords" content="Android," />
 
 
 
@@ -90,20 +90,32 @@
 
 
 
-<meta name="description" content="模式动机建立一种对象与对象之间的依赖关系，一个对象（观察目标）发生改变时将自动通知其他对象（观察者），其他对象将相应作出反应。而且观察者之间没有相互联系，可以根据需要增加和删除观察者，使得系统更易于扩展。 模式定义观察者模式属于对象行为型模式的一种，定义了对象间一对多的依赖关系，使得每当一个对象状态发生改变时，其相关依赖对象都得到通知并被自动更新。观察者模式又叫做发布-订阅（Publish/Sub">
-<meta name="keywords" content="读书笔记">
+<meta name="description" content="Introduction环境配置好了，现在就万事俱备了，然后我们就应该动手啦～  出于种种考虑……决定教大家用模版做一个简单的带有侧边栏的App来体验一下Android的乐趣所在。 Now, let’s begin. 新建工程 点击Start a new Android Studio project  之后就不用多说了，自己选择工程名字和所在位置。  选择模版Navigation Drawer A">
+<meta name="keywords" content="Android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="观察者模式(Observer Pattern)">
-<meta property="og:url" content="https://lwxwl.github.io/2017/05/22/观察者模式/index.html">
+<meta property="og:title" content="写给安卓萌新的教程 - 实践篇">
+<meta property="og:url" content="https://lwxwl.github.io/2017/07/26/写给安卓萌新的教程 - 实践篇 /index.html">
 <meta property="og:site_name" content="lwxwl&#39;s blog">
-<meta property="og:description" content="模式动机建立一种对象与对象之间的依赖关系，一个对象（观察目标）发生改变时将自动通知其他对象（观察者），其他对象将相应作出反应。而且观察者之间没有相互联系，可以根据需要增加和删除观察者，使得系统更易于扩展。 模式定义观察者模式属于对象行为型模式的一种，定义了对象间一对多的依赖关系，使得每当一个对象状态发生改变时，其相关依赖对象都得到通知并被自动更新。观察者模式又叫做发布-订阅（Publish/Sub">
-<meta property="og:image" content="http://ww2.sinaimg.cn/large/006HJ39wgy1ffu6cf6vftj30d307yjs0.jpg">
-<meta property="og:image" content="http://ww4.sinaimg.cn/large/006HJ39wgy1ffu6h0jk8qj318m0puafx.jpg">
-<meta property="og:updated_time" content="2017-05-22T11:27:49.000Z">
+<meta property="og:description" content="Introduction环境配置好了，现在就万事俱备了，然后我们就应该动手啦～  出于种种考虑……决定教大家用模版做一个简单的带有侧边栏的App来体验一下Android的乐趣所在。 Now, let’s begin. 新建工程 点击Start a new Android Studio project  之后就不用多说了，自己选择工程名字和所在位置。  选择模版Navigation Drawer A">
+<meta property="og:image" content="http://img2.imgtn.bdimg.com/it/u=3144884795,1127243859&fm=26&gp=0.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/0060lm7Tgy1fhxkz0wb4jj31kw0x6445.jpg">
+<meta property="og:image" content="http://pic.qqtn.com/up/2016-2/2016020109494558316.gif">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/0060lm7Tgy1fhxl3cu00nj30i80jkwg8.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/0060lm7Tgy1fhxl865y1wj30h80skwgi.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/0060lm7Tgy1fhxlctv2ltj30ha0uuq5x.jpg">
+<meta property="og:image" content="http://pic.qqtn.com/up/2016-2/2016020109494559520.gif">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/0060lm7Tgy1fhxlrm8qxjj31go136jz9.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/0060lm7Tgy1fhxm0j5r1wj31go138dq6.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/0060lm7Tgy1fhxm9702hxj31gq138dp5.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/0060lm7Tgy1fhxmptg0oqj31f613eais.jpg">
+<meta property="og:image" content="http://pic.qqtn.com/up/2016-2/2016020109494490121.gif">
+<meta property="og:image" content="http://pic.qqtn.com/up/2016-2/2016020109494598516.gif">
+<meta property="og:image" content="http://pic.qqtn.com/up/2016-2/2016020109494562192.gif">
+<meta property="og:updated_time" content="2017-07-26T14:07:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="观察者模式(Observer Pattern)">
-<meta name="twitter:description" content="模式动机建立一种对象与对象之间的依赖关系，一个对象（观察目标）发生改变时将自动通知其他对象（观察者），其他对象将相应作出反应。而且观察者之间没有相互联系，可以根据需要增加和删除观察者，使得系统更易于扩展。 模式定义观察者模式属于对象行为型模式的一种，定义了对象间一对多的依赖关系，使得每当一个对象状态发生改变时，其相关依赖对象都得到通知并被自动更新。观察者模式又叫做发布-订阅（Publish/Sub">
-<meta name="twitter:image" content="http://ww2.sinaimg.cn/large/006HJ39wgy1ffu6cf6vftj30d307yjs0.jpg">
+<meta name="twitter:title" content="写给安卓萌新的教程 - 实践篇">
+<meta name="twitter:description" content="Introduction环境配置好了，现在就万事俱备了，然后我们就应该动手啦～  出于种种考虑……决定教大家用模版做一个简单的带有侧边栏的App来体验一下Android的乐趣所在。 Now, let’s begin. 新建工程 点击Start a new Android Studio project  之后就不用多说了，自己选择工程名字和所在位置。  选择模版Navigation Drawer A">
+<meta name="twitter:image" content="http://img2.imgtn.bdimg.com/it/u=3144884795,1127243859&fm=26&gp=0.jpg">
 
 
 
@@ -131,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="https://lwxwl.github.io/2017/05/22/观察者模式/"/>
+  <link rel="canonical" href="https://lwxwl.github.io/2017/07/26/写给安卓萌新的教程 - 实践篇 /"/>
 
 
 
 
 
-  <title>观察者模式(Observer Pattern) | lwxwl's blog</title>
+  <title>写给安卓萌新的教程 - 实践篇 | lwxwl's blog</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -267,7 +279,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://lwxwl.github.io/2017/05/22/观察者模式/">
+    <link itemprop="mainEntityOfPage" href="https://lwxwl.github.io/2017/07/26/写给安卓萌新的教程 - 实践篇 /">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lwxwl">
@@ -284,7 +296,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">观察者模式(Observer Pattern)</h1>
+          <h1 class="post-title" itemprop="name headline">写给安卓萌新的教程 - 实践篇</h1>
         
 
         <div class="post-meta">
@@ -296,8 +308,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-22T00:00:00+08:00">
-                2017-05-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-26T00:00:00+08:00">
+                2017-07-26
               </time>
             
 
@@ -331,35 +343,75 @@
       
 
       
-        <h2 id="模式动机"><a href="#模式动机" class="headerlink" title="模式动机"></a>模式动机</h2><p>建立一种对象与对象之间的依赖关系，一个对象（观察目标）发生改变时将自动通知其他对象（观察者），其他对象将相应作出反应。而且观察者之间没有相互联系，可以根据需要增加和删除观察者，使得系统更易于扩展。</p>
-<h2 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h2><p>观察者模式属于对象<a href="http://design-patterns.readthedocs.io/zh_CN/latest/behavioral_patterns/behavioral.html" target="_blank" rel="external">行为型模式</a>的一种，定义了对象间一对多的依赖关系，使得每当一个对象状态发生改变时，其相关依赖对象都得到通知并被自动更新。观察者模式又叫做发布-订阅（Publish/Subscribe）模式、模型-视图（Model/View）模式、源-监听器（Source/Listener）模式或从属者（Dependents）模式。</p>
-<h2 id="模式结构"><a href="#模式结构" class="headerlink" title="模式结构"></a>模式结构</h2><p><img src="http://ww2.sinaimg.cn/large/006HJ39wgy1ffu6cf6vftj30d307yjs0.jpg" alt=""></p>
+        <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>环境配置好了，现在就万事俱备了，然后我们就应该动手啦～</p>
+<p><img src="http://img2.imgtn.bdimg.com/it/u=3144884795,1127243859&amp;fm=26&amp;gp=0.jpg" alt=""></p>
+<p>出于种种考虑……决定教大家用模版做一个简单的带有侧边栏的App来体验一下<code>Android</code>的乐趣所在。</p>
+<p>Now, let’s begin.</p>
+<h2 id="新建工程"><a href="#新建工程" class="headerlink" title="新建工程"></a>新建工程</h2><ul>
+<li>点击<code>Start a new Android Studio project</code></li>
+</ul>
+<p>之后就不用多说了，自己选择工程名字和所在位置。</p>
 <ul>
-<li>Subject（抽象主题接口）：定义了主题类中对观察者列表的一系列操作。</li>
-<li>ConcreteSubject（具体主题类）</li>
-<li>Observer（抽象观察者接口）：定义了观察者对主题类更新状态接受操作。</li>
-<li>ConcreteObserver（具体观察者类）：实现观察者接口更新主题类通知等逻辑。</li>
+<li>选择模版<code>Navigation Drawer Activity</code></li>
 </ul>
-<h2 id="模式示例"><a href="#模式示例" class="headerlink" title="模式示例"></a>模式示例</h2><p><img src="http://ww4.sinaimg.cn/large/006HJ39wgy1ffu6h0jk8qj318m0puafx.jpg" alt=""></p>
-<p><a href="https://github.com/lwxwl/CodePractise/blob/master/Java/ObserverPattern/" target="_blank" rel="external">练习代码</a></p>
-<h2 id="使用环境"><a href="#使用环境" class="headerlink" title="使用环境"></a>使用环境</h2><ul>
-<li>一个抽象模型有两个方面，其中一个方面依赖于另一个方面。将这些方面封装在独立的对象中使它们可以各自独立地改变和复用。</li>
-<li>一个对象的改变将导致其他一个或多个对象也发生改变，而不知道具体有多少对象将发生改变，可以降低对象之间的耦合度。</li>
-<li>一个对象必须通知其他对象，而并不知道这些对象是谁。</li>
-<li>需要在系统中创建一个触发链，A对象的行为将影响B对象，B对象的行为将影响C对象……，可以使用观察者模式创建一种链式触发机制。</li>
+<p><img src="http://ww2.sinaimg.cn/large/0060lm7Tgy1fhxkz0wb4jj31kw0x6445.jpg" alt=""></p>
+<p>后面基本一路Next就好，相信聪明的你一定会的(๑•̀ㅂ•́)و✧</p>
+<p><img src="http://pic.qqtn.com/up/2016-2/2016020109494558316.gif" alt=""></p>
+<h2 id="目录结构介绍"><a href="#目录结构介绍" class="headerlink" title="目录结构介绍"></a>目录结构介绍</h2><p>在<code>Android Studio</code>中，提供了以下几种项目结构类型：</p>
+<p><img src="http://ww2.sinaimg.cn/large/0060lm7Tgy1fhxl3cu00nj30i80jkwg8.jpg" alt=""></p>
+<p>我们一般常用的有以下两种结构：</p>
+<p><strong><code>Project</code>结构类型</strong></p>
+<p><img src="http://ww2.sinaimg.cn/large/0060lm7Tgy1fhxl865y1wj30h80skwgi.jpg" alt=""></p>
+<ul>
+<li><code>app/build/</code> app模块build编译输出的目录</li>
+<li><code>app/build.gradle</code> app模块的gradle编译文件</li>
+<li><code>app/app.iml</code> app模块的配置文件</li>
+<li><code>app/proguard-rules.pro</code> app模块proguard文件</li>
+<li><code>build.gradle</code> 项目的gradle编译文件</li>
+<li><code>settings.gradle</code> 定义项目包含哪些模块</li>
+<li><code>gradlew</code> 编译脚本，可以在命令行执行打包</li>
+<li><code>local.properties</code> 配置SDK/NDK</li>
+<li><code>MyApplication.iml</code> 项目的配置文件</li>
+<li><code>External Libraries</code> 项目依赖的Lib, 编译时自动下载的</li>
 </ul>
-<h2 id="模式优点"><a href="#模式优点" class="headerlink" title="模式优点"></a>模式优点</h2><ul>
-<li>观察者模式可以实现表示层和数据逻辑层的分离，并定义了稳定的消息更新传递机制，抽象了更新接口，使得可以有各种各样不同的表示层作为具体观察者角色。</li>
-<li>观察者模式在观察目标和观察者之间建立一个抽象的耦合。</li>
-<li>观察者模式支持广播通信。</li>
-<li>观察者模式符合“开闭原则”的要求。<h2 id="模式缺点"><a href="#模式缺点" class="headerlink" title="模式缺点"></a>模式缺点</h2></li>
-<li>如果一个观察目标对象有很多直接和间接的观察者的话，将所有的观察者都通知到会花费很多时间。</li>
-<li>如果在观察者和观察目标之间有循环依赖的话，观察目标会触发它们之间进行循环调用，可能导致系统崩溃。</li>
-<li>观察者模式没有相应的机制让观察者知道所观察的目标对象是怎么发生变化的，而仅仅只是知道观察目标发生了变化。</li>
+<p><strong><code>Android</code>结构类型</strong></p>
+<p><img src="http://ww1.sinaimg.cn/large/0060lm7Tgy1fhxlctv2ltj30ha0uuq5x.jpg" alt=""></p>
+<ul>
+<li><code>app/manifests</code> AndroidManifest.xml配置文件目录</li>
+<li><code>app/java</code> 源码目录</li>
+<li><code>app/res</code> 资源文件目录</li>
+<li><code>Gradle Scripts</code> gradle编译相关的脚本</li>
 </ul>
-<h2 id="模式扩展"><a href="#模式扩展" class="headerlink" title="模式扩展"></a>模式扩展</h2><p><a href="http://www.ruanyifeng.com/blog/2007/11/mvc.html" target="_blank" rel="external">MVC模式</a></p>
-<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p><a href="http://design-patterns.readthedocs.io/zh_CN/latest/behavioral_patterns/observer.html#id24" target="_blank" rel="external">Graphic Design Patterns</a></p>
-<p><a href="https://www.zybuluo.com/pastqing/note/191632" target="_blank" rel="external">java设计模式—观察者模式</a></p>
+<p>推荐大家多用<code>Project</code>目录，加强对工程的整体把握。</p>
+<h2 id="布局文件"><a href="#布局文件" class="headerlink" title="布局文件"></a>布局文件</h2><p>因为在开始我们选择使用了侧滑栏的模版，所以我们可以看到<code>app/res/layout</code>布局文件中除了<code>activity_main.xml</code>之外已经自动帮我们生成了<code>app_bar_main.xml</code>、<code>content_main.xml</code>、<code>nav_header_main.xml</code>三个布局文件，接下来就简单介绍一下它们。</p>
+<p><img src="http://pic.qqtn.com/up/2016-2/2016020109494559520.gif" alt=""></p>
+<ul>
+<li><code>content_main.xml</code></li>
+</ul>
+<p><img src="http://ww4.sinaimg.cn/large/0060lm7Tgy1fhxlrm8qxjj31go136jz9.jpg" alt=""></p>
+<p>这个布局很简单，就只有一个<code>TextView</code>显示<code>Hello World!</code>文字。其中相关的参数根据中文意思你们也应该能差不多猜到，这里不详细介绍，以后大家都会学到的…</p>
+<ul>
+<li><code>app_bar_main.xml</code></li>
+</ul>
+<p><img src="http://ww4.sinaimg.cn/large/0060lm7Tgy1fhxm0j5r1wj31go138dq6.jpg" alt=""></p>
+<p>布局包含三个部分，其中两个请参考图中标识。</p>
+<p>文字部分是通过<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;include layout=&quot;...&quot;/&gt;</div></pre></td></tr></table></figure></p>
+<p>的方式包含<code>content_main.xml</code>布局，所以会显示<code>Hello World!</code>文字。</p>
+<ul>
+<li><code>nav_header_main.xml</code></li>
+</ul>
+<p><img src="http://ww4.sinaimg.cn/large/0060lm7Tgy1fhxm9702hxj31gq138dp5.jpg" alt=""></p>
+<p>聪明的你一定会举一反三，很容易看出来，这个布局就是 <del>一张图加两句话</del> 一个<code>ImageView</code> + 两个<code>TextView</code>。</p>
+<p>嗯，忍住没换那个丑丑的绿色背景，不，忍不住了，先换了再说…</p>
+<ul>
+<li><code>activity_main.xml</code></li>
+</ul>
+<p><img src="http://ww3.sinaimg.cn/large/0060lm7Tgy1fhxmptg0oqj31f613eais.jpg" alt=""></p>
+<p>虽然还是不好看，咳咳……我们先说正事。</p>
+<p><code>activity_main.xml</code>就是整个工程的主布局文件，包括<code>app_bar_main.xml</code>和一个侧边栏的布局。</p>
+<p>可以看到，实际上<code>NavigationView</code>就是侧边栏的布局，包含了头部文件和菜单两个板块。头部文件实际上就是<code>nav_header_main.xml</code>布局，菜单部分你们可以在<code>app/res/menu</code>中自行查看，在此不做过多介绍。</p>
+<p>好了，布局文件到此就告一段落了(´・◡・｀)</p>
+<p><img src="http://pic.qqtn.com/up/2016-2/2016020109494490121.gif" alt=""><br><img src="http://pic.qqtn.com/up/2016-2/2016020109494598516.gif" alt=""><br><img src="http://pic.qqtn.com/up/2016-2/2016020109494562192.gif" alt=""></p>
 
       
     </div>
@@ -389,7 +441,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/读书笔记/" rel="tag"># 读书笔记</a>
+            <a href="/tags/Android/" rel="tag"># Android</a>
           
         </div>
       
@@ -402,8 +454,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/16/PAT (Basic Level) Practise/" rel="next" title="PAT (Basic Level) Practise">
-                <i class="fa fa-chevron-left"></i> PAT (Basic Level) Practise
+              <a href="/2017/07/25/写给安卓萌新的教程（Mac）- 配置篇/" rel="next" title="写给安卓萌新的教程（Mac）- 配置篇">
+                <i class="fa fa-chevron-left"></i> 写给安卓萌新的教程（Mac）- 配置篇
               </a>
             
           </div>
@@ -411,10 +463,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/23/RxJava/" rel="prev" title="RxJava">
-                RxJava <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -563,7 +611,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#模式动机"><span class="nav-number">1.</span> <span class="nav-text">模式动机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模式定义"><span class="nav-number">2.</span> <span class="nav-text">模式定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模式结构"><span class="nav-number">3.</span> <span class="nav-text">模式结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模式示例"><span class="nav-number">4.</span> <span class="nav-text">模式示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用环境"><span class="nav-number">5.</span> <span class="nav-text">使用环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模式优点"><span class="nav-number">6.</span> <span class="nav-text">模式优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模式缺点"><span class="nav-number">7.</span> <span class="nav-text">模式缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模式扩展"><span class="nav-number">8.</span> <span class="nav-text">模式扩展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关链接"><span class="nav-number">9.</span> <span class="nav-text">相关链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新建工程"><span class="nav-number">2.</span> <span class="nav-text">新建工程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录结构介绍"><span class="nav-number">3.</span> <span class="nav-text">目录结构介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布局文件"><span class="nav-number">4.</span> <span class="nav-text">布局文件</span></a></li></ol></div>
             
 
           </div>
