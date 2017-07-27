@@ -113,7 +113,7 @@
 <meta property="og:image" content="http://pic.qqtn.com/up/2016-2/2016020109494562192.gif">
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/0060lm7Tgy1fhyq56llwgj30q016ydia.jpg">
 <meta property="og:image" content="http://pic.qqtn.com/up/2016-2/2016020109494490121.gif">
-<meta property="og:updated_time" content="2017-07-27T12:51:29.000Z">
+<meta property="og:updated_time" content="2017-07-27T12:55:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="写给安卓萌新的教程 - 实践篇">
 <meta name="twitter:description" content="Introduction环境配置好了，现在就万事俱备了，然后我们就应该动手啦～  出于种种考虑……决定教大家用模版做一个简单的带有侧边栏的App来体验一下Android的乐趣所在。 Now, let’s begin. 新建工程 点击Start a new Android Studio project  之后就不用多说了，自己选择工程名字和所在位置。  选择模版Navigation Drawer A">
@@ -425,7 +425,7 @@
 <p>回到代码部分，我们先导入要用到的包:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import android.widget.TextView;</div></pre></td></tr></table></figure>
 <p>之后，在<code>OnCreate</code>部分写入代码:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">TextView textView = (TextView) findViewById(R.id.txv);</div><div class="line">textView.setText(&quot;欢迎加入木犀团队！&quot;);</div><div class="line">textView.setTextColor(getResources().getColor(R.color.colorPrimary));</div><div class="line">textView.setTextSize(24);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">TextView textView = (TextView) findViewById(R.id.txv);</div><div class="line">        textView.setText(&quot;欢迎加入木犀团队！&quot;);</div><div class="line">        textView.setTextColor(getResources().getColor(R.color.colorPrimary));</div><div class="line">        textView.setTextSize(24);</div></pre></td></tr></table></figure>
 <p>这里可以看到，我们先用<code>findViewById()</code>关联布局文件之后，可以通过<code>setText()</code>、<code>setTextColor()</code>、<code>setTextSize()</code>分别来动态设置<code>TextView</code>所显示的文字、字体颜色以及字体大小。最后的效果就是这样子 ☞</p>
 <p><img src="http://ww3.sinaimg.cn/large/0060lm7Tgy1fhypr0da7jj30pw16odhv.jpg" alt=""></p>
 <p>当然啦，看到这里之后你就可以 <del>随心所欲，为所欲为</del> 发挥自己的想象力和创造力了꒰ ∩´∇ `∩꒱</p>
@@ -433,7 +433,7 @@
 <p><strong><code>setOnClickListener()</code></strong></p>
 <p>在<code>Android</code>中，我们可以通过<code>setOnClickListener()</code>为各种<code>Button</code>设置监听事件。</p>
 <p>举个例子，在代码中:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">fab.setOnClickListener(new View.OnClickListener() &#123;</div><div class="line">@Override</div><div class="line">public void onClick(View view) &#123;</div><div class="line">Snackbar.make(view, &quot;Replace with your own action&quot;, Snackbar.LENGTH_LONG)</div><div class="line">.setAction(&quot;Action&quot;, null).show();</div><div class="line">&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">fab.setOnClickListener(new View.OnClickListener() &#123;</div><div class="line">        @Override</div><div class="line">        public void onClick(View view) &#123;</div><div class="line">                Snackbar.make(view, &quot;Replace with your own action&quot;, Snackbar.LENGTH_LONG)</div><div class="line">                        .setAction(&quot;Action&quot;, null).show();</div><div class="line">        &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p>这样就为<code>FloatingActionButton</code>设置了监听，点击<code>FloatingActionButton</code>之后，<br>会通过<code>Snackbar</code>显示”Replace with your own action”</p>
 <p><img src="http://ww3.sinaimg.cn/large/0060lm7Tgy1fhyq56llwgj30q016ydia.jpg" alt=""></p>
 <p>实际上，我们可以在这里写上我们想要实现的代码，这里就留给你们自己动手实践一下啦。</p>
