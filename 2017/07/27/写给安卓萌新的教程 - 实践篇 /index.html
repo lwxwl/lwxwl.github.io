@@ -1,0 +1,835 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Android," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="Introduction环境配置好了，现在就万事俱备了，然后我们就应该动手啦～  出于种种考虑……决定教大家用模版做一个简单的带有侧边栏的App来体验一下Android的乐趣所在。 Now, let’s begin. 新建工程 点击Start a new Android Studio project  之后就不用多说了，自己选择工程名字和所在位置。  选择模版Navigation Drawer A">
+<meta name="keywords" content="Android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="写给安卓萌新的教程 - 实践篇">
+<meta property="og:url" content="https://lwxwl.github.io/2017/07/27/写给安卓萌新的教程 - 实践篇 /index.html">
+<meta property="og:site_name" content="lwxwl&#39;s blog">
+<meta property="og:description" content="Introduction环境配置好了，现在就万事俱备了，然后我们就应该动手啦～  出于种种考虑……决定教大家用模版做一个简单的带有侧边栏的App来体验一下Android的乐趣所在。 Now, let’s begin. 新建工程 点击Start a new Android Studio project  之后就不用多说了，自己选择工程名字和所在位置。  选择模版Navigation Drawer A">
+<meta property="og:image" content="http://img2.imgtn.bdimg.com/it/u=3144884795,1127243859&fm=26&gp=0.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/0060lm7Tgy1fhxkz0wb4jj31kw0x6445.jpg">
+<meta property="og:image" content="http://pic.qqtn.com/up/2016-2/2016020109494558316.gif">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/0060lm7Tgy1fhxl3cu00nj30i80jkwg8.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/0060lm7Tgy1fhxl865y1wj30h80skwgi.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/0060lm7Tgy1fhxlctv2ltj30ha0uuq5x.jpg">
+<meta property="og:image" content="http://pic.qqtn.com/up/2016-2/2016020109494559520.gif">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/0060lm7Tgy1fhxlrm8qxjj31go136jz9.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/0060lm7Tgy1fhxm0j5r1wj31go138dq6.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/0060lm7Tgy1fhxm9702hxj31gq138dp5.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/0060lm7Tgy1fhxmptg0oqj31f613eais.jpg">
+<meta property="og:image" content="http://pic.qqtn.com/up/2016-2/2016020109494598516.gif">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/0060lm7Tgy1fhypr0da7jj30pw16odhv.jpg">
+<meta property="og:image" content="http://pic.qqtn.com/up/2016-2/2016020109494562192.gif">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/0060lm7Tgy1fhyq56llwgj30q016ydia.jpg">
+<meta property="og:image" content="http://pic.qqtn.com/up/2016-2/2016020109494490121.gif">
+<meta property="og:updated_time" content="2017-07-27T12:51:29.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="写给安卓萌新的教程 - 实践篇">
+<meta name="twitter:description" content="Introduction环境配置好了，现在就万事俱备了，然后我们就应该动手啦～  出于种种考虑……决定教大家用模版做一个简单的带有侧边栏的App来体验一下Android的乐趣所在。 Now, let’s begin. 新建工程 点击Start a new Android Studio project  之后就不用多说了，自己选择工程名字和所在位置。  选择模版Navigation Drawer A">
+<meta name="twitter:image" content="http://img2.imgtn.bdimg.com/it/u=3144884795,1127243859&fm=26&gp=0.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://lwxwl.github.io/2017/07/27/写给安卓萌新的教程 - 实践篇 /"/>
+
+
+
+
+
+  <title>写给安卓萌新的教程 - 实践篇 | lwxwl's blog</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">lwxwl's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">To Be A Better Man</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://lwxwl.github.io/2017/07/27/写给安卓萌新的教程 - 实践篇 /">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lwxwl">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lwxwl's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">写给安卓萌新的教程 - 实践篇</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-27T00:00:00+08:00">
+                2017-07-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>环境配置好了，现在就万事俱备了，然后我们就应该动手啦～</p>
+<p><img src="http://img2.imgtn.bdimg.com/it/u=3144884795,1127243859&amp;fm=26&amp;gp=0.jpg" alt=""></p>
+<p>出于种种考虑……决定教大家用模版做一个简单的带有侧边栏的App来体验一下<code>Android</code>的乐趣所在。</p>
+<p>Now, let’s begin.</p>
+<h2 id="新建工程"><a href="#新建工程" class="headerlink" title="新建工程"></a>新建工程</h2><ul>
+<li>点击<code>Start a new Android Studio project</code></li>
+</ul>
+<p>之后就不用多说了，自己选择工程名字和所在位置。</p>
+<ul>
+<li>选择模版<code>Navigation Drawer Activity</code></li>
+</ul>
+<p><img src="http://ww2.sinaimg.cn/large/0060lm7Tgy1fhxkz0wb4jj31kw0x6445.jpg" alt=""></p>
+<p>后面基本一路Next就好，相信聪明的你一定会的(๑•̀ㅂ•́)و✧</p>
+<p><img src="http://pic.qqtn.com/up/2016-2/2016020109494558316.gif" alt=""></p>
+<h2 id="目录结构介绍"><a href="#目录结构介绍" class="headerlink" title="目录结构介绍"></a>目录结构介绍</h2><p>在<code>Android Studio</code>中，提供了以下几种项目结构类型：</p>
+<p><img src="http://ww2.sinaimg.cn/large/0060lm7Tgy1fhxl3cu00nj30i80jkwg8.jpg" alt=""></p>
+<p>我们一般常用的有以下两种结构：</p>
+<p><strong><code>Project</code>结构类型</strong></p>
+<p><img src="http://ww2.sinaimg.cn/large/0060lm7Tgy1fhxl865y1wj30h80skwgi.jpg" alt=""></p>
+<ul>
+<li><code>app/build/</code> app模块build编译输出的目录</li>
+<li><code>app/build.gradle</code> app模块的gradle编译文件</li>
+<li><code>app/app.iml</code> app模块的配置文件</li>
+<li><code>app/proguard-rules.pro</code> app模块proguard文件</li>
+<li><code>build.gradle</code> 项目的gradle编译文件</li>
+<li><code>settings.gradle</code> 定义项目包含哪些模块</li>
+<li><code>gradlew</code> 编译脚本，可以在命令行执行打包</li>
+<li><code>local.properties</code> 配置SDK/NDK</li>
+<li><code>MyApplication.iml</code> 项目的配置文件</li>
+<li><code>External Libraries</code> 项目依赖的Lib, 编译时自动下载的</li>
+</ul>
+<p><strong><code>Android</code>结构类型</strong></p>
+<p><img src="http://ww1.sinaimg.cn/large/0060lm7Tgy1fhxlctv2ltj30ha0uuq5x.jpg" alt=""></p>
+<ul>
+<li><code>app/manifests</code> AndroidManifest.xml配置文件目录</li>
+<li><code>app/java</code> 源码目录</li>
+<li><code>app/res</code> 资源文件目录</li>
+<li><code>Gradle Scripts</code> gradle编译相关的脚本</li>
+</ul>
+<p>推荐大家多用<code>Project</code>目录，加强对工程的整体把握。</p>
+<h2 id="布局文件"><a href="#布局文件" class="headerlink" title="布局文件"></a>布局文件</h2><p>因为在开始我们选择使用了侧滑栏的模版，所以我们可以看到<code>app/res/layout</code>布局文件中除了<code>activity_main.xml</code>之外已经自动帮我们生成了<code>app_bar_main.xml</code>、<code>content_main.xml</code>、<code>nav_header_main.xml</code>三个布局文件，接下来就简单介绍一下它们。</p>
+<p><img src="http://pic.qqtn.com/up/2016-2/2016020109494559520.gif" alt=""></p>
+<ul>
+<li><code>content_main.xml</code></li>
+</ul>
+<p><img src="http://ww4.sinaimg.cn/large/0060lm7Tgy1fhxlrm8qxjj31go136jz9.jpg" alt=""></p>
+<p>这个布局很简单，就只有一个<code>TextView</code>显示<code>Hello World!</code>文字。其中相关的参数根据中文意思你们也应该能差不多猜到，这里不详细介绍，以后大家都会学到的…</p>
+<ul>
+<li><code>app_bar_main.xml</code></li>
+</ul>
+<p><img src="http://ww4.sinaimg.cn/large/0060lm7Tgy1fhxm0j5r1wj31go138dq6.jpg" alt=""></p>
+<p>布局包含三个部分，其中两个请参考图中标识。</p>
+<p>文字部分是通过<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;include layout=&quot;...&quot;/&gt;</div></pre></td></tr></table></figure></p>
+<p>的方式包含<code>content_main.xml</code>布局，所以会显示<code>Hello World!</code>文字。</p>
+<ul>
+<li><code>nav_header_main.xml</code></li>
+</ul>
+<p><img src="http://ww4.sinaimg.cn/large/0060lm7Tgy1fhxm9702hxj31gq138dp5.jpg" alt=""></p>
+<p>聪明的你一定会举一反三，很容易看出来，这个布局就是 <del>一张图加两句话</del> 一个<code>ImageView</code> + 两个<code>TextView</code>。</p>
+<p>嗯，忍住没换那个丑丑的绿色背景，不，忍不住了，先换了再说…</p>
+<ul>
+<li><code>activity_main.xml</code></li>
+</ul>
+<p><img src="http://ww3.sinaimg.cn/large/0060lm7Tgy1fhxmptg0oqj31f613eais.jpg" alt=""></p>
+<p>虽然还是不好看，咳咳……我们先说正事。</p>
+<p><code>activity_main.xml</code>就是整个工程的主布局文件，包括<code>app_bar_main.xml</code>和一个侧边栏的布局。</p>
+<p>可以看到，实际上<code>NavigationView</code>就是侧边栏的布局，包含了头部文件和菜单两个板块。头部文件实际上就是<code>nav_header_main.xml</code>布局，菜单部分你们可以在<code>app/res/menu</code>中自行查看，在此不做过多介绍。</p>
+<p>好了，布局文件到此就告一段落了(´・◡・｀)</p>
+<p><img src="http://pic.qqtn.com/up/2016-2/2016020109494598516.gif" alt=""></p>
+<h2 id="源码部分"><a href="#源码部分" class="headerlink" title="源码部分"></a>源码部分</h2><p>这里主要讲两个部分的内容来帮助你们理解和使用⊱(<em>“ ڡ “</em>)⊰</p>
+<p><strong><code>findViewById()</code></strong></p>
+<p>我们可以看到在<code>MainActivity</code>中，有以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);</div><div class="line">...</div><div class="line">FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);</div><div class="line">...</div><div class="line">DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);</div><div class="line">...</div><div class="line">NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);</div><div class="line">...</div></pre></td></tr></table></figure>
+<p>这些都是<code>findViewById()</code>的使用。<code>Android</code>中<code>findViewById()</code>是一个非常常用的函数，位于<code>android.app.Activity</code>包中。该函数利用我们在XML文件中定义的View的id属性来获取相应的View对象。当然，这不是唯一的方法，但是还是希望你们能熟练掌握这种方式＼( ◠‿◠ )／</p>
+<p>接下来我们举个例子 ☞☞☞</p>
+<p>相信大家都记得在<code>content_main.xml</code>中有一个<code>TextView</code>，我们在布局文件中给它设置一个id:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">android:id=&quot;@+id/txv&quot;</div></pre></td></tr></table></figure>
+<p>回到代码部分，我们先导入要用到的包:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import android.widget.TextView;</div></pre></td></tr></table></figure>
+<p>之后，在<code>OnCreate</code>部分写入代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">TextView textView = (TextView) findViewById(R.id.txv);</div><div class="line">textView.setText(&quot;欢迎加入木犀团队！&quot;);</div><div class="line">textView.setTextColor(getResources().getColor(R.color.colorPrimary));</div><div class="line">textView.setTextSize(24);</div></pre></td></tr></table></figure>
+<p>这里可以看到，我们先用<code>findViewById()</code>关联布局文件之后，可以通过<code>setText()</code>、<code>setTextColor()</code>、<code>setTextSize()</code>分别来动态设置<code>TextView</code>所显示的文字、字体颜色以及字体大小。最后的效果就是这样子 ☞</p>
+<p><img src="http://ww3.sinaimg.cn/large/0060lm7Tgy1fhypr0da7jj30pw16odhv.jpg" alt=""></p>
+<p>当然啦，看到这里之后你就可以 <del>随心所欲，为所欲为</del> 发挥自己的想象力和创造力了꒰ ∩´∇ `∩꒱</p>
+<p><img src="http://pic.qqtn.com/up/2016-2/2016020109494562192.gif" alt=""></p>
+<p><strong><code>setOnClickListener()</code></strong></p>
+<p>在<code>Android</code>中，我们可以通过<code>setOnClickListener()</code>为各种<code>Button</code>设置监听事件。</p>
+<p>举个例子，在代码中:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">fab.setOnClickListener(new View.OnClickListener() &#123;</div><div class="line">@Override</div><div class="line">public void onClick(View view) &#123;</div><div class="line">Snackbar.make(view, &quot;Replace with your own action&quot;, Snackbar.LENGTH_LONG)</div><div class="line">.setAction(&quot;Action&quot;, null).show();</div><div class="line">&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>这样就为<code>FloatingActionButton</code>设置了监听，点击<code>FloatingActionButton</code>之后，<br>会通过<code>Snackbar</code>显示”Replace with your own action”</p>
+<p><img src="http://ww3.sinaimg.cn/large/0060lm7Tgy1fhyq56llwgj30q016ydia.jpg" alt=""></p>
+<p>实际上，我们可以在这里写上我们想要实现的代码，这里就留给你们自己动手实践一下啦。</p>
+<p><img src="http://pic.qqtn.com/up/2016-2/2016020109494490121.gif" alt=""></p>
+<h2 id="Ending"><a href="#Ending" class="headerlink" title="Ending"></a>Ending</h2><p>看到这里，有木有觉得<code>Android</code>很有趣（有，我帮你们回答了…）</p>
+<p>在这里放上<a href="https://github.com/lwxwl/CodePractise/tree/master/Sample" target="_blank" rel="external">代码的链接</a>，可以作为参考。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/25/写给安卓萌新的教程（Mac）- 配置篇/" rel="next" title="写给安卓萌新的教程（Mac）- 配置篇">
+                <i class="fa fa-chevron-left"></i> 写给安卓萌新的教程（Mac）- 配置篇
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="lwxwl" />
+          <p class="site-author-name" itemprop="name">lwxwl</p>
+           
+              <p class="site-description motion-element" itemprop="description">好好学习，天天向上(๑•̀ㅂ•́)و✧</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lwxwl" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/_lwxwl_" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://m.weibo.cn/u/5318684652" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新建工程"><span class="nav-number">2.</span> <span class="nav-text">新建工程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录结构介绍"><span class="nav-number">3.</span> <span class="nav-text">目录结构介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布局文件"><span class="nav-number">4.</span> <span class="nav-text">布局文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源码部分"><span class="nav-number">5.</span> <span class="nav-text">源码部分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ending"><span class="nav-number">6.</span> <span class="nav-text">Ending</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lwxwl</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+<script type="text/javascript" color="176,23,31" opacity='1' zIndex="-1" count="66" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+
+</body>
+</html>
