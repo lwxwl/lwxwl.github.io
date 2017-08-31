@@ -90,20 +90,17 @@
 
 
 
-<meta name="description" content="模式动机建立一种对象与对象之间的依赖关系，一个对象（观察目标）发生改变时将自动通知其他对象（观察者），其他对象将相应作出反应。而且观察者之间没有相互联系，可以根据需要增加和删除观察者，使得系统更易于扩展。 模式定义观察者模式属于对象行为型模式的一种，定义了对象间一对多的依赖关系，使得每当一个对象状态发生改变时，其相关依赖对象都得到通知并被自动更新。观察者模式又叫做发布-订阅（Publish/Sub">
+<meta name="description" content="对象导论抽象过程  Java所基于语言之一Smalltalk的五个基本特性 同时也是面向对象程序的设计方式   万物皆为对象  ☞ 可以抽取待求解问题的任何概念化构件，使之成为对象。  程序是对象的集合，它们通过发送消息来告知彼此所要做的。  ☞ 可以说消息是对某个特定对象的方法的调用请求。  每个对象都有自己的由其他对象所构成的存储。  ☞ 可以通过创建现有对象的包的方式来创建新的对象  每个对">
 <meta name="keywords" content="读书笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="观察者模式(Observer Pattern)">
-<meta property="og:url" content="https://lwxwl.github.io/2017/05/22/观察者模式/index.html">
+<meta property="og:title" content="《Thinking in Java》读书笔记">
+<meta property="og:url" content="https://lwxwl.github.io/2017/08/31/《Thinking in Java》读书笔记/index.html">
 <meta property="og:site_name" content="lwxwl&#39;s blog">
-<meta property="og:description" content="模式动机建立一种对象与对象之间的依赖关系，一个对象（观察目标）发生改变时将自动通知其他对象（观察者），其他对象将相应作出反应。而且观察者之间没有相互联系，可以根据需要增加和删除观察者，使得系统更易于扩展。 模式定义观察者模式属于对象行为型模式的一种，定义了对象间一对多的依赖关系，使得每当一个对象状态发生改变时，其相关依赖对象都得到通知并被自动更新。观察者模式又叫做发布-订阅（Publish/Sub">
-<meta property="og:image" content="http://ww2.sinaimg.cn/large/006HJ39wgy1ffu6cf6vftj30d307yjs0.jpg">
-<meta property="og:image" content="http://ww4.sinaimg.cn/large/006HJ39wgy1ffu6h0jk8qj318m0puafx.jpg">
-<meta property="og:updated_time" content="2017-05-22T11:27:49.000Z">
+<meta property="og:description" content="对象导论抽象过程  Java所基于语言之一Smalltalk的五个基本特性 同时也是面向对象程序的设计方式   万物皆为对象  ☞ 可以抽取待求解问题的任何概念化构件，使之成为对象。  程序是对象的集合，它们通过发送消息来告知彼此所要做的。  ☞ 可以说消息是对某个特定对象的方法的调用请求。  每个对象都有自己的由其他对象所构成的存储。  ☞ 可以通过创建现有对象的包的方式来创建新的对象  每个对">
+<meta property="og:updated_time" content="2017-08-31T06:31:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="观察者模式(Observer Pattern)">
-<meta name="twitter:description" content="模式动机建立一种对象与对象之间的依赖关系，一个对象（观察目标）发生改变时将自动通知其他对象（观察者），其他对象将相应作出反应。而且观察者之间没有相互联系，可以根据需要增加和删除观察者，使得系统更易于扩展。 模式定义观察者模式属于对象行为型模式的一种，定义了对象间一对多的依赖关系，使得每当一个对象状态发生改变时，其相关依赖对象都得到通知并被自动更新。观察者模式又叫做发布-订阅（Publish/Sub">
-<meta name="twitter:image" content="http://ww2.sinaimg.cn/large/006HJ39wgy1ffu6cf6vftj30d307yjs0.jpg">
+<meta name="twitter:title" content="《Thinking in Java》读书笔记">
+<meta name="twitter:description" content="对象导论抽象过程  Java所基于语言之一Smalltalk的五个基本特性 同时也是面向对象程序的设计方式   万物皆为对象  ☞ 可以抽取待求解问题的任何概念化构件，使之成为对象。  程序是对象的集合，它们通过发送消息来告知彼此所要做的。  ☞ 可以说消息是对某个特定对象的方法的调用请求。  每个对象都有自己的由其他对象所构成的存储。  ☞ 可以通过创建现有对象的包的方式来创建新的对象  每个对">
 
 
 
@@ -131,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="https://lwxwl.github.io/2017/05/22/观察者模式/"/>
+  <link rel="canonical" href="https://lwxwl.github.io/2017/08/31/《Thinking in Java》读书笔记/"/>
 
 
 
 
 
-  <title>观察者模式(Observer Pattern) | lwxwl's blog</title>
+  <title>《Thinking in Java》读书笔记 | lwxwl's blog</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -267,7 +264,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://lwxwl.github.io/2017/05/22/观察者模式/">
+    <link itemprop="mainEntityOfPage" href="https://lwxwl.github.io/2017/08/31/《Thinking in Java》读书笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lwxwl">
@@ -284,7 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">观察者模式(Observer Pattern)</h1>
+          <h1 class="post-title" itemprop="name headline">《Thinking in Java》读书笔记</h1>
         
 
         <div class="post-meta">
@@ -296,8 +293,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-22T00:00:00+08:00">
-                2017-05-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-31T00:00:00+08:00">
+                2017-08-31
               </time>
             
 
@@ -331,35 +328,84 @@
       
 
       
-        <h2 id="模式动机"><a href="#模式动机" class="headerlink" title="模式动机"></a>模式动机</h2><p>建立一种对象与对象之间的依赖关系，一个对象（观察目标）发生改变时将自动通知其他对象（观察者），其他对象将相应作出反应。而且观察者之间没有相互联系，可以根据需要增加和删除观察者，使得系统更易于扩展。</p>
-<h2 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h2><p>观察者模式属于对象<a href="http://design-patterns.readthedocs.io/zh_CN/latest/behavioral_patterns/behavioral.html" target="_blank" rel="external">行为型模式</a>的一种，定义了对象间一对多的依赖关系，使得每当一个对象状态发生改变时，其相关依赖对象都得到通知并被自动更新。观察者模式又叫做发布-订阅（Publish/Subscribe）模式、模型-视图（Model/View）模式、源-监听器（Source/Listener）模式或从属者（Dependents）模式。</p>
-<h2 id="模式结构"><a href="#模式结构" class="headerlink" title="模式结构"></a>模式结构</h2><p><img src="http://ww2.sinaimg.cn/large/006HJ39wgy1ffu6cf6vftj30d307yjs0.jpg" alt=""></p>
+        <h2 id="对象导论"><a href="#对象导论" class="headerlink" title="对象导论"></a>对象导论</h2><p><strong>抽象过程</strong></p>
+<blockquote>
+<p><code>Java</code>所基于语言之一<code>Smalltalk</code>的五个基本特性</p>
+<p>同时也是面向对象程序的设计方式</p>
+</blockquote>
 <ul>
-<li>Subject（抽象主题接口）：定义了主题类中对观察者列表的一系列操作。</li>
-<li>ConcreteSubject（具体主题类）</li>
-<li>Observer（抽象观察者接口）：定义了观察者对主题类更新状态接受操作。</li>
-<li>ConcreteObserver（具体观察者类）：实现观察者接口更新主题类通知等逻辑。</li>
+<li>万物皆为对象</li>
 </ul>
-<h2 id="模式示例"><a href="#模式示例" class="headerlink" title="模式示例"></a>模式示例</h2><p><img src="http://ww4.sinaimg.cn/large/006HJ39wgy1ffu6h0jk8qj318m0puafx.jpg" alt=""></p>
-<p><a href="https://github.com/lwxwl/CodePractise/blob/master/Java/ObserverPattern/" target="_blank" rel="external">练习代码</a></p>
-<h2 id="使用环境"><a href="#使用环境" class="headerlink" title="使用环境"></a>使用环境</h2><ul>
-<li>一个抽象模型有两个方面，其中一个方面依赖于另一个方面。将这些方面封装在独立的对象中使它们可以各自独立地改变和复用。</li>
-<li>一个对象的改变将导致其他一个或多个对象也发生改变，而不知道具体有多少对象将发生改变，可以降低对象之间的耦合度。</li>
-<li>一个对象必须通知其他对象，而并不知道这些对象是谁。</li>
-<li>需要在系统中创建一个触发链，A对象的行为将影响B对象，B对象的行为将影响C对象……，可以使用观察者模式创建一种链式触发机制。</li>
+<p>☞ 可以抽取待求解问题的任何概念化构件，使之成为对象。</p>
+<ul>
+<li>程序是对象的集合，它们通过发送消息来告知彼此所要做的。</li>
 </ul>
-<h2 id="模式优点"><a href="#模式优点" class="headerlink" title="模式优点"></a>模式优点</h2><ul>
-<li>观察者模式可以实现表示层和数据逻辑层的分离，并定义了稳定的消息更新传递机制，抽象了更新接口，使得可以有各种各样不同的表示层作为具体观察者角色。</li>
-<li>观察者模式在观察目标和观察者之间建立一个抽象的耦合。</li>
-<li>观察者模式支持广播通信。</li>
-<li>观察者模式符合“开闭原则”的要求。<h2 id="模式缺点"><a href="#模式缺点" class="headerlink" title="模式缺点"></a>模式缺点</h2></li>
-<li>如果一个观察目标对象有很多直接和间接的观察者的话，将所有的观察者都通知到会花费很多时间。</li>
-<li>如果在观察者和观察目标之间有循环依赖的话，观察目标会触发它们之间进行循环调用，可能导致系统崩溃。</li>
-<li>观察者模式没有相应的机制让观察者知道所观察的目标对象是怎么发生变化的，而仅仅只是知道观察目标发生了变化。</li>
+<p>☞ 可以说消息是对某个特定对象的方法的调用请求。</p>
+<ul>
+<li>每个对象都有自己的由其他对象所构成的存储。</li>
 </ul>
-<h2 id="模式扩展"><a href="#模式扩展" class="headerlink" title="模式扩展"></a>模式扩展</h2><p><a href="http://www.ruanyifeng.com/blog/2007/11/mvc.html" target="_blank" rel="external">MVC模式</a></p>
-<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p><a href="http://design-patterns.readthedocs.io/zh_CN/latest/behavioral_patterns/observer.html#id24" target="_blank" rel="external">Graphic Design Patterns</a></p>
-<p><a href="https://www.zybuluo.com/pastqing/note/191632" target="_blank" rel="external">java设计模式—观察者模式</a></p>
+<p>☞ 可以通过创建现有对象的包的方式来创建新的对象</p>
+<ul>
+<li>每个对象都拥有其类型。</li>
+</ul>
+<p>☞ 每个对象都是一个类的实例，而不同类的区别正在于可以接收什么样的消息。</p>
+<ul>
+<li>某一特定类型的所有对象都可以接收同样的消息。</li>
+</ul>
+<p>☞ 可替代性。</p>
+<p><strong>每个对象都有一个接口</strong></p>
+<p>类是一种抽象数据类型，描述了具有相同特性（数据元素）和行为（功能）的对象集合，也可以说每一个对象都属于定义了特性和行为的某个类，每个类的成员或元素都具有某种共性。它的运行方式可以概括为：创建某一类型的变量（对象／实例）-&gt; 操作变量（发送消息／请求）。</p>
+<p>类型决定接口，而接口确定了某一特定对象所能发出的请求。</p>
+<p><strong>每个对象都提供服务</strong></p>
+<p>可以将对象视为服务提供者，提高程序的内聚性。</p>
+<p><strong>被隐藏的具体实现</strong></p>
+<blockquote>
+<p>访问控制的存在原因</p>
+</blockquote>
+<ul>
+<li>隐藏对数据类型的内部操作必需，而不是用户解决特定问题所需的接口的部分。</li>
+<li>允许在不影响客户端的前提下改变类内部的工作方式。</li>
+</ul>
+<blockquote>
+<p>访问指定词</p>
+</blockquote>
+<ul>
+<li><code>public</code>    全部可用</li>
+<li><code>private</code>   类型创建者和类型的内部方法可用</li>
+<li><code>protected</code> 除类型创建者和类型的内部方法之外，继承的类也可以访问</li>
+</ul>
+<p><strong>复用具体实现</strong></p>
+<p><code>组合</code>：使用现有的类合成新的类，新类的成员对象通常被声明为<code>private</code>。如果是动态发生的，通常称之为<code>聚合</code>。</p>
+<p><strong>继承</strong></p>
+<p>类型不仅仅描述了作用于一个对象集合上的约束条件，同时也描述了与其他类型之间的关系。</p>
+<p>一个基类型<code>（基类／超类／父类）</code>包含其所有导出类型<code>（导出类／继承类／子类）</code>的特性和行为。导出类复制了基类的接口，与基类具有相同的类型。从而产生了类型等价性。</p>
+<blockquote>
+<p>使基类与导出类产生差异</p>
+</blockquote>
+<ul>
+<li>直接在导出类中添加新方法</li>
+<li><code>覆盖</code>：在导出类中创建方法的新定义</li>
+</ul>
+<p>当导出类和基类类型完全相同时（未添加新的方法）-&gt; 纯粹替代 -&gt; 替代方法</p>
+<p><strong>伴随多态的可互换对象</strong></p>
+<p><code>Java</code>中默认执行<code>动态绑定</code>，也就产生了<code>后期绑定</code>的概念。当向对象发送消息时，被调用的代码直到运行时才能确定。</p>
+<p><strong>单根继承结构</strong></p>
+<p>所有的类最终都继承自单一的基类<code>Object</code>。</p>
+<p><strong>容器</strong></p>
+<ul>
+<li>不同的容器提供了不同的接口和外部行为。</li>
+<li>不同的容器对于某些操作具有不同的效率。</li>
+</ul>
+<p><code>向上转型</code>: 向继承结构的上层转型为一个更泛化的类型。</p>
+<p><code>向下转型</code>: 向继承结构的下层转型为一个更具体的类型。由于向下转型的危险性，从而产生了<code>参数化类型机制</code>。</p>
+<p><code>参数化类型（范型）</code>: 一个编译器可以自动制定作用于特定类型上的类，通过<code>&lt;类型信息&gt;</code>来表示，以识别对范型的使用。</p>
+<p><strong>对象的创建与生命期</strong></p>
+<p><code>Java</code>采用动态内存分配方式，创建新对象时通过使用<code>new</code>关键字来构建对象的动态实例。并提供了“垃圾回收器”的机制，自动发现不再被使用的对象，继而销毁。</p>
+<p><strong>异常处理：处理错误</strong></p>
+<p>异常处理是与正常执行路径并行的，在发生错误时执行的另一条路径。</p>
+<p><strong>并发编程</strong></p>
+<p><code>线程</code>：彼此独立运行的部分。多个线程同时工作称之为“<code>并发</code>”。</p>
+<p>当<code>共享资源</code>时，某个任务锁定某项资源，完成其任务，然后释放资源锁，使其他任务可以使用这项资源。</p>
 
       
     </div>
@@ -402,8 +448,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/16/PAT (Basic Level) Practise/" rel="next" title="PAT (Basic Level) Practise">
-                <i class="fa fa-chevron-left"></i> PAT (Basic Level) Practise
+              <a href="/2017/08/30/2017木犀夏令营总结/" rel="next" title="2017木犀夏令营总结">
+                <i class="fa fa-chevron-left"></i> 2017木犀夏令营总结
               </a>
             
           </div>
@@ -411,10 +457,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/23/RxJava/" rel="prev" title="RxJava">
-                RxJava <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -563,7 +605,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#模式动机"><span class="nav-number">1.</span> <span class="nav-text">模式动机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模式定义"><span class="nav-number">2.</span> <span class="nav-text">模式定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模式结构"><span class="nav-number">3.</span> <span class="nav-text">模式结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模式示例"><span class="nav-number">4.</span> <span class="nav-text">模式示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用环境"><span class="nav-number">5.</span> <span class="nav-text">使用环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模式优点"><span class="nav-number">6.</span> <span class="nav-text">模式优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模式缺点"><span class="nav-number">7.</span> <span class="nav-text">模式缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模式扩展"><span class="nav-number">8.</span> <span class="nav-text">模式扩展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关链接"><span class="nav-number">9.</span> <span class="nav-text">相关链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#对象导论"><span class="nav-number">1.</span> <span class="nav-text">对象导论</span></a></li></ol></div>
             
 
           </div>
