@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="对象导论抽象过程  Java所基于语言之一Smalltalk的五个基本特性 同时也是面向对象程序的设计方式   万物皆为对象  ☞ 可以抽取待求解问题的任何概念化构件，使之成为对象。  程序是对象的集合，它们通过发送消息来告知彼此所要做的。  ☞ 可以说消息是对某个特定对象的方法的调用请求。  每个对象都有自己的由其他对象所构成的存储。  ☞ 可以通过创建现有对象的包的方式来创建新的对象  每个对">
+<meta name="description" content="对象导论抽象过程 Java所基于语言之一Smalltalk的五个基本特性 同时也是面向对象程序的设计方式   万物皆为对象  ☞ 可以抽取待求解问题的任何概念化构件，使之成为对象。  程序是对象的集合，它们通过发送消息来告知彼此所要做的。  ☞ 可以说消息是对某个特定对象的方法的调用请求。  每个对象都有自己的由其他对象所构成的存储。  ☞ 可以通过创建现有对象的包的方式来创建新的对象  每个对象">
 <meta name="keywords" content="读书笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《Thinking in Java》读书笔记">
 <meta property="og:url" content="https://lwxwl.github.io/2017/08/31/《Thinking in Java》读书笔记/index.html">
 <meta property="og:site_name" content="lwxwl&#39;s blog">
-<meta property="og:description" content="对象导论抽象过程  Java所基于语言之一Smalltalk的五个基本特性 同时也是面向对象程序的设计方式   万物皆为对象  ☞ 可以抽取待求解问题的任何概念化构件，使之成为对象。  程序是对象的集合，它们通过发送消息来告知彼此所要做的。  ☞ 可以说消息是对某个特定对象的方法的调用请求。  每个对象都有自己的由其他对象所构成的存储。  ☞ 可以通过创建现有对象的包的方式来创建新的对象  每个对">
-<meta property="og:updated_time" content="2017-08-31T06:31:03.000Z">
+<meta property="og:description" content="对象导论抽象过程 Java所基于语言之一Smalltalk的五个基本特性 同时也是面向对象程序的设计方式   万物皆为对象  ☞ 可以抽取待求解问题的任何概念化构件，使之成为对象。  程序是对象的集合，它们通过发送消息来告知彼此所要做的。  ☞ 可以说消息是对某个特定对象的方法的调用请求。  每个对象都有自己的由其他对象所构成的存储。  ☞ 可以通过创建现有对象的包的方式来创建新的对象  每个对象">
+<meta property="og:updated_time" content="2017-09-26T08:42:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《Thinking in Java》读书笔记">
-<meta name="twitter:description" content="对象导论抽象过程  Java所基于语言之一Smalltalk的五个基本特性 同时也是面向对象程序的设计方式   万物皆为对象  ☞ 可以抽取待求解问题的任何概念化构件，使之成为对象。  程序是对象的集合，它们通过发送消息来告知彼此所要做的。  ☞ 可以说消息是对某个特定对象的方法的调用请求。  每个对象都有自己的由其他对象所构成的存储。  ☞ 可以通过创建现有对象的包的方式来创建新的对象  每个对">
+<meta name="twitter:description" content="对象导论抽象过程 Java所基于语言之一Smalltalk的五个基本特性 同时也是面向对象程序的设计方式   万物皆为对象  ☞ 可以抽取待求解问题的任何概念化构件，使之成为对象。  程序是对象的集合，它们通过发送消息来告知彼此所要做的。  ☞ 可以说消息是对某个特定对象的方法的调用请求。  每个对象都有自己的由其他对象所构成的存储。  ☞ 可以通过创建现有对象的包的方式来创建新的对象  每个对象">
 
 
 
@@ -328,8 +328,7 @@
       
 
       
-        <h2 id="对象导论"><a href="#对象导论" class="headerlink" title="对象导论"></a>对象导论</h2><p><strong>抽象过程</strong></p>
-<blockquote>
+        <h2 id="对象导论"><a href="#对象导论" class="headerlink" title="对象导论"></a>对象导论</h2><h3 id="抽象过程"><a href="#抽象过程" class="headerlink" title="抽象过程"></a>抽象过程</h3><blockquote>
 <p><code>Java</code>所基于语言之一<code>Smalltalk</code>的五个基本特性</p>
 <p>同时也是面向对象程序的设计方式</p>
 </blockquote>
@@ -353,13 +352,10 @@
 <li>某一特定类型的所有对象都可以接收同样的消息。</li>
 </ul>
 <p>☞ 可替代性。</p>
-<p><strong>每个对象都有一个接口</strong></p>
-<p>类是一种抽象数据类型，描述了具有相同特性（数据元素）和行为（功能）的对象集合，也可以说每一个对象都属于定义了特性和行为的某个类，每个类的成员或元素都具有某种共性。它的运行方式可以概括为：创建某一类型的变量（对象／实例）-&gt; 操作变量（发送消息／请求）。</p>
+<h3 id="每个对象都有一个接口"><a href="#每个对象都有一个接口" class="headerlink" title="每个对象都有一个接口"></a>每个对象都有一个接口</h3><p>类是一种抽象数据类型，描述了具有相同特性（数据元素）和行为（功能）的对象集合，也可以说每一个对象都属于定义了特性和行为的某个类，每个类的成员或元素都具有某种共性。它的运行方式可以概括为：创建某一类型的变量（对象／实例）-&gt; 操作变量（发送消息／请求）。</p>
 <p>类型决定接口，而接口确定了某一特定对象所能发出的请求。</p>
-<p><strong>每个对象都提供服务</strong></p>
-<p>可以将对象视为服务提供者，提高程序的内聚性。</p>
-<p><strong>被隐藏的具体实现</strong></p>
-<blockquote>
+<h3 id="每个对象都提供服务"><a href="#每个对象都提供服务" class="headerlink" title="每个对象都提供服务"></a>每个对象都提供服务</h3><p>可以将对象视为服务提供者，提高程序的内聚性。</p>
+<h3 id="被隐藏的具体实现"><a href="#被隐藏的具体实现" class="headerlink" title="被隐藏的具体实现"></a>被隐藏的具体实现</h3><blockquote>
 <p>访问控制的存在原因</p>
 </blockquote>
 <ul>
@@ -374,10 +370,8 @@
 <li><code>private</code>   类型创建者和类型的内部方法可用</li>
 <li><code>protected</code> 除类型创建者和类型的内部方法之外，继承的类也可以访问</li>
 </ul>
-<p><strong>复用具体实现</strong></p>
-<p><code>组合</code>：使用现有的类合成新的类，新类的成员对象通常被声明为<code>private</code>。如果是动态发生的，通常称之为<code>聚合</code>。</p>
-<p><strong>继承</strong></p>
-<p>类型不仅仅描述了作用于一个对象集合上的约束条件，同时也描述了与其他类型之间的关系。</p>
+<h3 id="复用具体实现"><a href="#复用具体实现" class="headerlink" title="复用具体实现"></a>复用具体实现</h3><p><code>组合</code>：使用现有的类合成新的类，新类的成员对象通常被声明为<code>private</code>。如果是动态发生的，通常称之为<code>聚合</code>。</p>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>类型不仅仅描述了作用于一个对象集合上的约束条件，同时也描述了与其他类型之间的关系。</p>
 <p>一个基类型<code>（基类／超类／父类）</code>包含其所有导出类型<code>（导出类／继承类／子类）</code>的特性和行为。导出类复制了基类的接口，与基类具有相同的类型。从而产生了类型等价性。</p>
 <blockquote>
 <p>使基类与导出类产生差异</p>
@@ -387,26 +381,48 @@
 <li><code>覆盖</code>：在导出类中创建方法的新定义</li>
 </ul>
 <p>当导出类和基类类型完全相同时（未添加新的方法）-&gt; 纯粹替代 -&gt; 替代方法</p>
-<p><strong>伴随多态的可互换对象</strong></p>
-<p><code>Java</code>中默认执行<code>动态绑定</code>，也就产生了<code>后期绑定</code>的概念。当向对象发送消息时，被调用的代码直到运行时才能确定。</p>
-<p><strong>单根继承结构</strong></p>
-<p>所有的类最终都继承自单一的基类<code>Object</code>。</p>
-<p><strong>容器</strong></p>
-<ul>
+<h3 id="伴随多态的可互换对象"><a href="#伴随多态的可互换对象" class="headerlink" title="伴随多态的可互换对象"></a>伴随多态的可互换对象</h3><p><code>Java</code>中默认执行<code>动态绑定</code>，也就产生了<code>后期绑定</code>的概念。当向对象发送消息时，被调用的代码直到运行时才能确定。</p>
+<h3 id="单根继承结构"><a href="#单根继承结构" class="headerlink" title="单根继承结构"></a>单根继承结构</h3><p>所有的类最终都继承自单一的基类<code>Object</code>。</p>
+<h3 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h3><ul>
 <li>不同的容器提供了不同的接口和外部行为。</li>
 <li>不同的容器对于某些操作具有不同的效率。</li>
 </ul>
 <p><code>向上转型</code>: 向继承结构的上层转型为一个更泛化的类型。</p>
 <p><code>向下转型</code>: 向继承结构的下层转型为一个更具体的类型。由于向下转型的危险性，从而产生了<code>参数化类型机制</code>。</p>
 <p><code>参数化类型（范型）</code>: 一个编译器可以自动制定作用于特定类型上的类，通过<code>&lt;类型信息&gt;</code>来表示，以识别对范型的使用。</p>
-<p><strong>对象的创建与生命期</strong></p>
-<p><code>Java</code>采用动态内存分配方式，创建新对象时通过使用<code>new</code>关键字来构建对象的动态实例。并提供了“垃圾回收器”的机制，自动发现不再被使用的对象，继而销毁。</p>
-<p><strong>异常处理：处理错误</strong></p>
-<p>异常处理是与正常执行路径并行的，在发生错误时执行的另一条路径。</p>
-<p><strong>并发编程</strong></p>
-<p><code>线程</code>：彼此独立运行的部分。多个线程同时工作称之为“<code>并发</code>”。</p>
+<h3 id="对象的创建与生命期"><a href="#对象的创建与生命期" class="headerlink" title="对象的创建与生命期"></a>对象的创建与生命期</h3><p><code>Java</code>采用动态内存分配方式，创建新对象时通过使用<code>new</code>关键字来构建对象的动态实例。并提供了“垃圾回收器”的机制，自动发现不再被使用的对象，继而销毁。</p>
+<h3 id="异常处理：处理错误"><a href="#异常处理：处理错误" class="headerlink" title="异常处理：处理错误"></a>异常处理：处理错误</h3><p>异常处理是与正常执行路径并行的，在发生错误时执行的另一条路径。</p>
+<h3 id="并发编程"><a href="#并发编程" class="headerlink" title="并发编程"></a>并发编程</h3><p><code>线程</code>：彼此独立运行的部分。多个线程同时工作称之为“<code>并发</code>”。</p>
 <p>当<code>共享资源</code>时，某个任务锁定某项资源，完成其任务，然后释放资源锁，使其他任务可以使用这项资源。</p>
-
+<h2 id="一切都是对象"><a href="#一切都是对象" class="headerlink" title="一切都是对象"></a>一切都是对象</h2><h3 id="是引用操纵对象"><a href="#是引用操纵对象" class="headerlink" title="是引用操纵对象"></a>是引用操纵对象</h3><p>创建一个引用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">String s;</div><div class="line"></div><div class="line">// 初始化引用</div><div class="line">String s = &quot;abcd&quot;;</div></pre></td></tr></table></figure>
+<p>此时还未与对象关联。</p>
+<h3 id="必须由你创建所有对象"><a href="#必须由你创建所有对象" class="headerlink" title="必须由你创建所有对象"></a>必须由你创建所有对象</h3><p>使引用关联对象，通过<code>new</code>关键字来实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">String s = new String(&quot;abcd&quot;);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>存储区    </p>
+</blockquote>
+<ul>
+<li>寄存器</li>
+</ul>
+<p>☞ 位于处理器内部，是最快的存储区，不能直接控制。</p>
+<ul>
+<li>堆栈</li>
+</ul>
+<p>☞ </p>
+<ul>
+<li>堆</li>
+</ul>
+<p>☞ </p>
+<ul>
+<li>常量存储</li>
+</ul>
+<p>☞ 常量值通常直接存放在代码程序内部。在嵌入式</p>
+<ul>
+<li>非RAM存储</li>
+</ul>
+<p>☞ 把对象转化成可以存放在其他媒介上的事物，在需要时，可恢复成常规的、基于RAM的对象。如流对象和持久化对象。</p>
+<h3 id="永远不需要销毁对象"><a href="#永远不需要销毁对象" class="headerlink" title="永远不需要销毁对象"></a>永远不需要销毁对象</h3><h3 id="创建新的数据类型：类"><a href="#创建新的数据类型：类" class="headerlink" title="创建新的数据类型：类"></a>创建新的数据类型：类</h3><h3 id="方法，参数和返回值"><a href="#方法，参数和返回值" class="headerlink" title="方法，参数和返回值"></a>方法，参数和返回值</h3>
       
     </div>
 
@@ -605,7 +621,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#对象导论"><span class="nav-number">1.</span> <span class="nav-text">对象导论</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#对象导论"><span class="nav-number">1.</span> <span class="nav-text">对象导论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象过程"><span class="nav-number">1.1.</span> <span class="nav-text">抽象过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#每个对象都有一个接口"><span class="nav-number">1.2.</span> <span class="nav-text">每个对象都有一个接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#每个对象都提供服务"><span class="nav-number">1.3.</span> <span class="nav-text">每个对象都提供服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#被隐藏的具体实现"><span class="nav-number">1.4.</span> <span class="nav-text">被隐藏的具体实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复用具体实现"><span class="nav-number">1.5.</span> <span class="nav-text">复用具体实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承"><span class="nav-number">1.6.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#伴随多态的可互换对象"><span class="nav-number">1.7.</span> <span class="nav-text">伴随多态的可互换对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单根继承结构"><span class="nav-number">1.8.</span> <span class="nav-text">单根继承结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#容器"><span class="nav-number">1.9.</span> <span class="nav-text">容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象的创建与生命期"><span class="nav-number">1.10.</span> <span class="nav-text">对象的创建与生命期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常处理：处理错误"><span class="nav-number">1.11.</span> <span class="nav-text">异常处理：处理错误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#并发编程"><span class="nav-number">1.12.</span> <span class="nav-text">并发编程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一切都是对象"><span class="nav-number">2.</span> <span class="nav-text">一切都是对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#是引用操纵对象"><span class="nav-number">2.1.</span> <span class="nav-text">是引用操纵对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#必须由你创建所有对象"><span class="nav-number">2.2.</span> <span class="nav-text">必须由你创建所有对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#永远不需要销毁对象"><span class="nav-number">2.3.</span> <span class="nav-text">永远不需要销毁对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建新的数据类型：类"><span class="nav-number">2.4.</span> <span class="nav-text">创建新的数据类型：类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法，参数和返回值"><span class="nav-number">2.5.</span> <span class="nav-text">方法，参数和返回值</span></a></li></ol></li></ol></div>
             
 
           </div>
