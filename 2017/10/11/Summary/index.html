@@ -97,7 +97,7 @@
 <meta property="og:url" content="https://lwxwl.github.io/2017/10/11/Summary/index.html">
 <meta property="og:site_name" content="lwxwl&#39;s blog">
 <meta property="og:description" content="JAVA COLLECTIONSArrayList参考链接 🔗  继承自List接口，允许添加多个null元素及重复元素，并保持元素插入顺序  Example: 1234567891011121314151617181920212223import java.util.ArrayList;public class Main &amp;#123;     public static void main(S">
-<meta property="og:updated_time" content="2017-10-10T16:36:10.000Z">
+<meta property="og:updated_time" content="2017-10-10T16:39:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Summary">
 <meta name="twitter:description" content="JAVA COLLECTIONSArrayList参考链接 🔗  继承自List接口，允许添加多个null元素及重复元素，并保持元素插入顺序  Example: 1234567891011121314151617181920212223import java.util.ArrayList;public class Main &amp;#123;     public static void main(S">
@@ -431,150 +431,56 @@
 <li><strong>Iterator</strong></li>
 <li><strong>Enumeration</strong></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">public class Main &#123;</div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        ArrayList&lt;String&gt; arrayList = new ArrayList&lt;&gt;();</div><div class="line">        arrayList.add(&quot;Oh&quot;);</div><div class="line">        arrayList.add(&quot;my&quot;);</div><div class="line">        arrayList.add(&quot;gosh&quot;);</div><div class="line"></div><div class="line">        // For Loop</div><div class="line">        for (int i = 0; i &lt; arrayList.size(); i++) &#123;</div><div class="line">            System.out.println(arrayList.get(i));</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // Foreach Loop</div><div class="line">        for (String str : arrayList) &#123;</div><div class="line">            System.out.println(str);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // While Loop</div><div class="line">        int count = 0;</div><div class="line">        while (arrayList.size() &gt; count) &#123;</div><div class="line">            System.out.println(arrayList.get(count));</div><div class="line">            count++;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // Iterator</div><div class="line">        Iterator iterator = arrayList.iterator();</div><div class="line">        while (iterator.hasNext()) &#123;</div><div class="line">            System.out.println(iterator.next());</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // Enumeration</div><div class="line">        Enumeration&lt;String&gt; enumeration = Collections.enumeration(arrayList);</div><div class="line">            System.out.println(enumeration.nextElement());</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">``` </div><div class="line"></div><div class="line">对于</div><div class="line">`ArrayList`</div><div class="line">来说，随机访问比较快。for循环中的</div><div class="line">`get()`</div><div class="line">方法，采用的是随机访问的方法；而iterator中的</div><div class="line">`next()`</div><div class="line">方法，采用的是顺序访问。因此，</div><div class="line">`ArrayList`</div><div class="line">适合用前者，而</div><div class="line">`LinkedList`</div><div class="line">则适合用后者。</div><div class="line"></div><div class="line">#### Convert To Array</div></pre></td></tr></table></figure>
-<pre><code>// Convert to array - 1
-String[] arr = new String[arrayList.size()];
-for (int i = 0; i &lt; arrayList.size(); i++) {
-    arr[i] = arrayList.get(i);
-}
-
-// Convert to array - 2
-String[] arr1 = arrayList.toArray(new String[arrayList.size()]);
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#### Sort</div><div class="line"></div><div class="line">* **Collections.sort()**</div><div class="line"></div><div class="line">&gt; 按照字母先后顺序或者数字从小到大的顺序排列</div></pre></td></tr></table></figure>
-<p>public class Main {<br>    public static void main(String[] args) {<br>        ArrayList<string> arrayList = new ArrayList&lt;&gt;();<br>        arrayList.add(“Oh”);<br>        arrayList.add(“my”);<br>        arrayList.add(“gosh”);</string></p>
-<pre><code>    Collections.sort(arrayList);
-
-    for (String str : arrayList) {
-        System.out.println(str);
-    }
-}
-</code></pre><p>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">输出</div></pre></td></tr></table></figure>
-<p>Oh<br>gosh<br>my</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">那么问题来了 ☞ 如何按照递减的顺序排列呢？</div><div class="line"></div><div class="line">* **Collections.sort(arrayList, Collections.reverseOrder());**</div><div class="line"></div><div class="line">这样就是按照递减的方式排列了，或者也可以用以下方式代替 ☞</div></pre></td></tr></table></figure>
-<p>Collections.sort(arrayList);<br>Collections.reverse(arrayList);</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">当然，以上两种适用于简单的数据的排序，当`ArrayList`的存放的数据类型变得更为复杂时呢？</div><div class="line"></div><div class="line">Emmm……比如说这样 ☞</div></pre></td></tr></table></figure>
-<p>class Book  {<br>    private String name;<br>    private int time;<br>    private int pages;</p>
-<pre><code>public Book(String name, int time, int pages) {
-     this.name = name;
-     this.time = time;
-     this.pages = pages;
-}
-
-public String getName() {
-     return name;
-}
-
-public void setName(String name) {
-     this.name = name;
-}
-
-public int getTime() {
-     return time;
-}
-
-public void setTime(int time) {
-     this.time = time;
-}
-
-public int getPages() {
-     return pages;
-}
-
-public void setPages(int pages) {
-     this.pages = pages;
-}    
-</code></pre><p>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">我们已经定义了一种新的数据类型`Book`，现在用`ArrayList`来存放数据 ☞</div></pre></td></tr></table></figure>
-<p>public class Main {<br>    public static void main(String args[]){<br>         ArrayList<book> arrayList = new ArrayList&lt;&gt;();<br>         arrayList.add(new Book(“ABC”, 223, 26));<br>         arrayList.add(new Book(“DEF”, 245, 24));<br>         arrayList.add(new Book(“GHI”, 557, 32));<br>    }<br>}</book></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">现在再用之前的方法肯定是行不通了，试试借助其他办法 ☞</div><div class="line"></div><div class="line">* **Comparable**</div><div class="line"></div><div class="line">通过重写`Comparable`接口的`compareTo()`方法，来比较排序。</div></pre></td></tr></table></figure>
-<p>class Book implements Comparable<book> {<br>    private String name;<br>    private int time;<br>    private int pages;</book></p>
-<pre><code>public Book(String name, int time, int pages) {
-     this.name = name;
-     this.time = time;
-     this.pages = pages;
-}
-
-...
-
-@Override
-public int compareTo(Book book) {
-     int page =((Book)book).getPages();
-     // For ascending order
-     return this.pages - page;
-     // For descending order
-     // return page - this.pages;
-
-}
-
-@Override
-public String toString() {
-     return &quot;[ name = &quot; + name + &quot;, time = &quot; + time + &quot;, pages = &quot; + pages + &quot;]&quot;;
-}
-</code></pre><p>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<p>public class Main {<br>    public static void main(String args[]) {<br>         ArrayList<book> arrayList = new ArrayList&lt;&gt;();<br>         arrayList.add(new Book(“ABC”, 223, 26));<br>         arrayList.add(new Book(“DEF”, 245, 24));<br>         arrayList.add(new Book(“GHI”, 557, 32));<br>         Collections.sort(arrayList);<br>         for (Book str : arrayList) {<br>            System.out.println(str);<br>         }<br>    }<br>}</book></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">输出</div></pre></td></tr></table></figure>
-<p>[ name = DEF, time = 245, pages = 24]<br>[ name = ABC, time = 223, pages = 26]<br>[ name = GHI, time = 557, pages = 32]</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">* **Comparator**</div><div class="line"></div><div class="line">或者我们可以重写`Comparator`接口中的`compare()`方法来排序。</div></pre></td></tr></table></figure>
-<p>class Book {<br>    private String name;<br>    private int time;<br>    private int pages;</p>
-<pre><code>public Book(String name, int time, int pages) {
-    this.name = name;
-    this.time = time;
-    this.pages = pages;
-}
-
-...
-
-public static Comparator&lt;Book&gt; compareName = new Comparator&lt;Book&gt;() {
-    @Override
-    public int compare(Book o1, Book o2) {
-        String name1 = o1.getName();
-        String name2 = o2.getName();
-        // String name = o.getName().toUpperCase();
-
-        // For ascending order
-        return name1.compareTo(name2);
-
-        // For descending order
-        // return name2.compareTo(name1);
-    }
-};
-
-public static Comparator&lt;Book&gt; compareTime = new Comparator&lt;Book&gt;() {
-    @Override
-    public int compare(Book o1, Book o2) {
-        int time1 = o1.getTime();
-        int time2 = o2.getTime();
-
-        return time1 - time2;
-        // return time2 - time1;
-    }
-};
-
-@Override
-public String toString() {
-    return &quot;[ name = &quot; + name + &quot;, time = &quot; + time + &quot;, pages = &quot; + pages + &quot;]&quot;;
-}
-</code></pre><p>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<p>public class Main {<br>    public static void main(String args[]) {<br>        ArrayList<book> arrayList = new ArrayList&lt;&gt;();<br>        arrayList.add(new Book(“ABC”, 223, 26));<br>        arrayList.add(new Book(“DEF”, 245, 24));<br>        arrayList.add(new Book(“GHI”, 557, 32));</book></p>
-<pre><code>    Collections.sort(arrayList, Book.compareName);
-    System.out.println(&quot;Sorted by name&quot;);
-    for (Book str : arrayList) {
-        System.out.println(str);
-    }
-
-    System.out.println(&quot;Sorted by time&quot;);
-    Collections.sort(arrayList, Book.compareTime);
-    for (Book str : arrayList) {
-        System.out.println(str);
-    }
-}
-</code></pre><p>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">输出</div></pre></td></tr></table></figure>
-<p>Sorted by name<br>[ name = ABC, time = 223, pages = 26]<br>[ name = DEF, time = 245, pages = 24]<br>[ name = GHI, time = 557, pages = 32]<br>Sorted by time<br>[ name = ABC, time = 223, pages = 26]<br>[ name = DEF, time = 245, pages = 24]<br>[ name = GHI, time = 557, pages = 32]</p>
-<p>```</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">public class Main &#123;</div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        ArrayList&lt;String&gt; arrayList = new ArrayList&lt;&gt;();</div><div class="line">        arrayList.add(&quot;Oh&quot;);</div><div class="line">        arrayList.add(&quot;my&quot;);</div><div class="line">        arrayList.add(&quot;gosh&quot;);</div><div class="line"></div><div class="line">        // For Loop</div><div class="line">        for (int i = 0; i &lt; arrayList.size(); i++) &#123;</div><div class="line">            System.out.println(arrayList.get(i));</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // Foreach Loop</div><div class="line">        for (String str : arrayList) &#123;</div><div class="line">            System.out.println(str);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // While Loop</div><div class="line">        int count = 0;</div><div class="line">        while (arrayList.size() &gt; count) &#123;</div><div class="line">            System.out.println(arrayList.get(count));</div><div class="line">            count++;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // Iterator</div><div class="line">        Iterator iterator = arrayList.iterator();</div><div class="line">        while (iterator.hasNext()) &#123;</div><div class="line">            System.out.println(iterator.next());</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // Enumeration</div><div class="line">        Enumeration&lt;String&gt; enumeration = Collections.enumeration(arrayList);</div><div class="line">            System.out.println(enumeration.nextElement());</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>对于</p>
+<p><code>ArrayList</code></p>
+<p>来说，随机访问比较快。for循环中的</p>
+<p><code>get()</code></p>
+<p>方法，采用的是随机访问的方法；而iterator中的</p>
+<p><code>next()</code></p>
+<p>方法，采用的是顺序访问。因此，</p>
+<p><code>ArrayList</code></p>
+<p>适合用前者，而</p>
+<p><code>LinkedList</code></p>
+<p>则适合用后者。</p>
+<h4 id="Convert-To-Array"><a href="#Convert-To-Array" class="headerlink" title="Convert To Array"></a>Convert To Array</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// Convert to array - 1</div><div class="line">String[] arr = new String[arrayList.size()];</div><div class="line">for (int i = 0; i &lt; arrayList.size(); i++) &#123;</div><div class="line">    arr[i] = arrayList.get(i);</div><div class="line">&#125;</div><div class="line"></div><div class="line">// Convert to array - 2</div><div class="line">String[] arr1 = arrayList.toArray(new String[arrayList.size()]);</div></pre></td></tr></table></figure>
+<h4 id="Sort"><a href="#Sort" class="headerlink" title="Sort"></a>Sort</h4><ul>
+<li><strong>Collections.sort()</strong></li>
+</ul>
+<blockquote>
+<p>按照字母先后顺序或者数字从小到大的顺序排列</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">public class Main &#123;</div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        ArrayList&lt;String&gt; arrayList = new ArrayList&lt;&gt;();</div><div class="line">        arrayList.add(&quot;Oh&quot;);</div><div class="line">        arrayList.add(&quot;my&quot;);</div><div class="line">        arrayList.add(&quot;gosh&quot;);</div><div class="line"></div><div class="line">        Collections.sort(arrayList);</div><div class="line"></div><div class="line">        for (String str : arrayList) &#123;</div><div class="line">            System.out.println(str);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Oh</div><div class="line">gosh</div><div class="line">my</div></pre></td></tr></table></figure>
+<p>那么问题来了 ☞ 如何按照递减的顺序排列呢？</p>
+<ul>
+<li><strong>Collections.sort(arrayList, Collections.reverseOrder());</strong></li>
+</ul>
+<p>这样就是按照递减的方式排列了，或者也可以用以下方式代替 ☞</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Collections.sort(arrayList);</div><div class="line">Collections.reverse(arrayList);</div></pre></td></tr></table></figure>
+<p>当然，以上两种适用于简单的数据的排序，当<code>ArrayList</code>的存放的数据类型变得更为复杂时呢？</p>
+<p>Emmm……比如说这样 ☞</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">class Book  &#123;</div><div class="line">    private String name;</div><div class="line">    private int time;</div><div class="line">    private int pages;</div><div class="line"></div><div class="line">    public Book(String name, int time, int pages) &#123;</div><div class="line">         this.name = name;</div><div class="line">         this.time = time;</div><div class="line">         this.pages = pages;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public String getName() &#123;</div><div class="line">         return name;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void setName(String name) &#123;</div><div class="line">         this.name = name;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public int getTime() &#123;</div><div class="line">         return time;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void setTime(int time) &#123;</div><div class="line">         this.time = time;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public int getPages() &#123;</div><div class="line">         return pages;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void setPages(int pages) &#123;</div><div class="line">         this.pages = pages;</div><div class="line">    &#125;	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>我们已经定义了一种新的数据类型<code>Book</code>，现在用<code>ArrayList</code>来存放数据 ☞</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">public class Main &#123;</div><div class="line">    public static void main(String args[])&#123;</div><div class="line">         ArrayList&lt;Book&gt; arrayList = new ArrayList&lt;&gt;();</div><div class="line">         arrayList.add(new Book(&quot;ABC&quot;, 223, 26));</div><div class="line">         arrayList.add(new Book(&quot;DEF&quot;, 245, 24));</div><div class="line">         arrayList.add(new Book(&quot;GHI&quot;, 557, 32));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>现在再用之前的方法肯定是行不通了，试试借助其他办法 ☞</p>
+<ul>
+<li><strong>Comparable</strong></li>
+</ul>
+<p>通过重写<code>Comparable</code>接口的<code>compareTo()</code>方法，来比较排序。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">class Book implements Comparable&lt;Book&gt; &#123;</div><div class="line">    private String name;</div><div class="line">    private int time;</div><div class="line">    private int pages;</div><div class="line"></div><div class="line">    public Book(String name, int time, int pages) &#123;</div><div class="line">         this.name = name;</div><div class="line">         this.time = time;</div><div class="line">         this.pages = pages;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    ...</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public int compareTo(Book book) &#123;</div><div class="line">         int page =((Book)book).getPages();</div><div class="line">         // For ascending order</div><div class="line">         return this.pages - page;</div><div class="line">         // For descending order</div><div class="line">         // return page - this.pages;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public String toString() &#123;</div><div class="line">         return &quot;[ name = &quot; + name + &quot;, time = &quot; + time + &quot;, pages = &quot; + pages + &quot;]&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">public class Main &#123;</div><div class="line">    public static void main(String args[]) &#123;</div><div class="line">         ArrayList&lt;Book&gt; arrayList = new ArrayList&lt;&gt;();</div><div class="line">         arrayList.add(new Book(&quot;ABC&quot;, 223, 26));</div><div class="line">         arrayList.add(new Book(&quot;DEF&quot;, 245, 24));</div><div class="line">         arrayList.add(new Book(&quot;GHI&quot;, 557, 32));</div><div class="line">         Collections.sort(arrayList);</div><div class="line">         for (Book str : arrayList) &#123;</div><div class="line">            System.out.println(str);</div><div class="line">         &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[ name = DEF, time = 245, pages = 24]</div><div class="line">[ name = ABC, time = 223, pages = 26]</div><div class="line">[ name = GHI, time = 557, pages = 32]</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>Comparator</strong></li>
+</ul>
+<p>或者我们可以重写<code>Comparator</code>接口中的<code>compare()</code>方法来排序。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">class Book &#123;</div><div class="line">    private String name;</div><div class="line">    private int time;</div><div class="line">    private int pages;</div><div class="line"></div><div class="line">    public Book(String name, int time, int pages) &#123;</div><div class="line">        this.name = name;</div><div class="line">        this.time = time;</div><div class="line">        this.pages = pages;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    ...</div><div class="line"></div><div class="line">    public static Comparator&lt;Book&gt; compareName = new Comparator&lt;Book&gt;() &#123;</div><div class="line">        @Override</div><div class="line">        public int compare(Book o1, Book o2) &#123;</div><div class="line">            String name1 = o1.getName();</div><div class="line">            String name2 = o2.getName();</div><div class="line">            // String name = o.getName().toUpperCase();</div><div class="line"></div><div class="line">            // For ascending order</div><div class="line">            return name1.compareTo(name2);</div><div class="line"></div><div class="line">            // For descending order</div><div class="line">            // return name2.compareTo(name1);</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    public static Comparator&lt;Book&gt; compareTime = new Comparator&lt;Book&gt;() &#123;</div><div class="line">        @Override</div><div class="line">        public int compare(Book o1, Book o2) &#123;</div><div class="line">            int time1 = o1.getTime();</div><div class="line">            int time2 = o2.getTime();</div><div class="line"></div><div class="line">            return time1 - time2;</div><div class="line">            // return time2 - time1;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public String toString() &#123;</div><div class="line">        return &quot;[ name = &quot; + name + &quot;, time = &quot; + time + &quot;, pages = &quot; + pages + &quot;]&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">public class Main &#123;</div><div class="line">    public static void main(String args[]) &#123;</div><div class="line">        ArrayList&lt;Book&gt; arrayList = new ArrayList&lt;&gt;();</div><div class="line">        arrayList.add(new Book(&quot;ABC&quot;, 223, 26));</div><div class="line">        arrayList.add(new Book(&quot;DEF&quot;, 245, 24));</div><div class="line">        arrayList.add(new Book(&quot;GHI&quot;, 557, 32));</div><div class="line"></div><div class="line">        Collections.sort(arrayList, Book.compareName);</div><div class="line">        System.out.println(&quot;Sorted by name&quot;);</div><div class="line">        for (Book str : arrayList) &#123;</div><div class="line">            System.out.println(str);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        System.out.println(&quot;Sorted by time&quot;);</div><div class="line">        Collections.sort(arrayList, Book.compareTime);</div><div class="line">        for (Book str : arrayList) &#123;</div><div class="line">            System.out.println(str);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Sorted by name</div><div class="line">[ name = ABC, time = 223, pages = 26]</div><div class="line">[ name = DEF, time = 245, pages = 24]</div><div class="line">[ name = GHI, time = 557, pages = 32]</div><div class="line">Sorted by time</div><div class="line">[ name = ABC, time = 223, pages = 26]</div><div class="line">[ name = DEF, time = 245, pages = 24]</div><div class="line">[ name = GHI, time = 557, pages = 32]</div></pre></td></tr></table></figure>
 <p>未完待续。。。</p>
 
       
@@ -775,7 +681,7 @@ public String toString() {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JAVA-COLLECTIONS"><span class="nav-number">1.</span> <span class="nav-text">JAVA COLLECTIONS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayList"><span class="nav-number">1.1.</span> <span class="nav-text">ArrayList</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Method"><span class="nav-number">1.1.1.</span> <span class="nav-text">Method</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Initialization"><span class="nav-number">1.1.2.</span> <span class="nav-text">Initialization</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Iteration"><span class="nav-number">1.1.3.</span> <span class="nav-text">Iteration</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JAVA-COLLECTIONS"><span class="nav-number">1.</span> <span class="nav-text">JAVA COLLECTIONS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayList"><span class="nav-number">1.1.</span> <span class="nav-text">ArrayList</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Method"><span class="nav-number">1.1.1.</span> <span class="nav-text">Method</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Initialization"><span class="nav-number">1.1.2.</span> <span class="nav-text">Initialization</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Iteration"><span class="nav-number">1.1.3.</span> <span class="nav-text">Iteration</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Convert-To-Array"><span class="nav-number">1.1.4.</span> <span class="nav-text">Convert To Array</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sort"><span class="nav-number">1.1.5.</span> <span class="nav-text">Sort</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
