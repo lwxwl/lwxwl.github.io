@@ -1,0 +1,877 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Java," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="JAVA COLLECTIONSArrayList参考链接 🔗  继承自List接口，允许添加多个null元素及重复元素，并保持元素插入顺序  Example: 1234567891011121314151617181920212223import java.util.ArrayList;public class Main &amp;#123;public static void main(String">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Summary">
+<meta property="og:url" content="https://lwxwl.github.io/2017/10/11/Summary/index.html">
+<meta property="og:site_name" content="lwxwl&#39;s blog">
+<meta property="og:description" content="JAVA COLLECTIONSArrayList参考链接 🔗  继承自List接口，允许添加多个null元素及重复元素，并保持元素插入顺序  Example: 1234567891011121314151617181920212223import java.util.ArrayList;public class Main &amp;#123;public static void main(String">
+<meta property="og:updated_time" content="2017-10-10T16:18:47.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Summary">
+<meta name="twitter:description" content="JAVA COLLECTIONSArrayList参考链接 🔗  继承自List接口，允许添加多个null元素及重复元素，并保持元素插入顺序  Example: 1234567891011121314151617181920212223import java.util.ArrayList;public class Main &amp;#123;public static void main(String">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://lwxwl.github.io/2017/10/11/Summary/"/>
+
+
+
+
+
+  <title>Summary | lwxwl's blog</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">lwxwl's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">To Be A Better Man</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://lwxwl.github.io/2017/10/11/Summary/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lwxwl">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lwxwl's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Summary</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-11T00:00:00+08:00">
+                2017-10-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="JAVA-COLLECTIONS"><a href="#JAVA-COLLECTIONS" class="headerlink" title="JAVA COLLECTIONS"></a>JAVA COLLECTIONS</h2><h3 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h3><p>参考链接 <a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html" target="_blank" rel="external">🔗</a></p>
+<blockquote>
+<p>继承自<code>List</code>接口，允许添加多个null元素及重复元素，并保持元素插入顺序</p>
+</blockquote>
+<p>Example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">import java.util.ArrayList;</div><div class="line"></div><div class="line">public class Main &#123;</div><div class="line">public static void main(String[] args) &#123;</div><div class="line">ArrayList&lt;String&gt; arrayList = new ArrayList&lt;&gt;();</div><div class="line">arrayList.add(&quot;Oh&quot;);</div><div class="line">arrayList.add(&quot;my&quot;);</div><div class="line">arrayList.add(&quot;gosh&quot;);</div><div class="line">System.out.println(arrayList);</div><div class="line"></div><div class="line">arrayList.add(0, &quot;What&apos;s&quot;);</div><div class="line">arrayList.add(1, &quot;the&quot;);</div><div class="line">arrayList.add(2, &quot;fuck&quot;);</div><div class="line">System.out.println(arrayList);</div><div class="line"></div><div class="line">arrayList.remove(&quot;Oh&quot;);</div><div class="line">System.out.println(arrayList);</div><div class="line"></div><div class="line">arrayList.remove(0);</div><div class="line">arrayList.remove(1);</div><div class="line">System.out.println(arrayList);</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[Oh, my, gosh]</div><div class="line">[What&apos;s, the, fuck, Oh, my, gosh]</div><div class="line">[What&apos;s, the, fuck, my, gosh]</div><div class="line">[the, my, gosh]</div></pre></td></tr></table></figure>
+<p>执行arrayList.remove(0)后，位于0的新的元素是”the”，所以执行arrayList.remove(1)删除的是”fuck”。如果要按顺序删除的话，一直执行arrayList.remove(0)即可</p>
+<h4 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h4><ul>
+<li><code>add(Object o)</code></li>
+</ul>
+<blockquote>
+<p>在末端添加新元素o</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arrayList.add(&quot;Oh&quot;);</div></pre></td></tr></table></figure>
+<ul>
+<li><code>add(int index, Object o)</code></li>
+</ul>
+<blockquote>
+<p>在指定位置添加元素o</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arrayList.add(2, &quot;fuck&quot;);  // 2nd index, 3rd position</div></pre></td></tr></table></figure>
+<ul>
+<li><code>remove(Object o)</code></li>
+</ul>
+<blockquote>
+<p>删除元素o</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arrayList.remove(&quot;Oh&quot;);</div></pre></td></tr></table></figure>
+<ul>
+<li><code>remove(int index)</code></li>
+</ul>
+<blockquote>
+<p>删除指定位置的元素</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arrayList.remove(0);  // index 0, 1st element of the list</div></pre></td></tr></table></figure>
+<ul>
+<li><code>set(int index, Object o)</code></li>
+</ul>
+<blockquote>
+<p>替换指定位置的元素</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arrayList.set(0, &quot;wow&quot;);</div></pre></td></tr></table></figure>
+<ul>
+<li><code>int indexOf(Object o)</code></li>
+</ul>
+<blockquote>
+<p>返回元素o的索引，如果元素不存在则返回-1</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">int pos = arrayList.indexOf(&quot;Oh&quot;);</div></pre></td></tr></table></figure>
+<ul>
+<li><code>Object get(int index)</code></li>
+</ul>
+<blockquote>
+<p>返回特定位置上的元素</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">String string = arrayList.get(0);</div></pre></td></tr></table></figure>
+<ul>
+<li><code>int size()</code></li>
+</ul>
+<blockquote>
+<p>返回<code>ArrayList</code>的长度，即其中的元素个数</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">int num = arrayList.size();</div></pre></td></tr></table></figure>
+<ul>
+<li><code>boolean contains(Object o)</code></li>
+</ul>
+<blockquote>
+<p>检查是否存在元素o，返回true／false</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arrayList.contains(&quot;oh&quot;);</div></pre></td></tr></table></figure>
+<ul>
+<li><code>clear()</code></li>
+</ul>
+<blockquote>
+<p>清空所有元素</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arrayList.clear();</div></pre></td></tr></table></figure>
+<h4 id="Initialization"><a href="#Initialization" class="headerlink" title="Initialization"></a>Initialization</h4><ul>
+<li><strong>Method 1: Initialization with Arrays.asList()</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ArrayList&lt;Type&gt; obj = new ArrayList&lt;Type&gt;(</div><div class="line">Arrays.asList(Object o1, Object o2, Object o3, ...));</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>Method 2: Anonymous inner class method to initialize ArrayList</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ArrayList&lt;T&gt; obj = new ArrayList&lt;T&gt;()&#123;&#123;</div><div class="line">add(Object o1);</div><div class="line">add(Object o2);</div><div class="line">add(Object o3);</div><div class="line">...</div><div class="line">&#125;&#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>Method3: Normal way of ArrayList initialization</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ArrayList&lt;T&gt; obj = new ArrayList&lt;T&gt;();</div><div class="line">obj.add(&quot;Object o1&quot;);</div><div class="line">obj.add(&quot;Object o2&quot;);</div><div class="line">obj.add(&quot;Object o3&quot;);</div><div class="line">...</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>Method 4: Use Collections.ncopies</strong></li>
+</ul>
+<p>给所有元素赋相同的值时适用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ArrayList&lt;T&gt; obj = new ArrayList&lt;T&gt;(Collections.nCopies(count, element));</div></pre></td></tr></table></figure>
+<h4 id="Iteration"><a href="#Iteration" class="headerlink" title="Iteration"></a>Iteration</h4><ul>
+<li><strong>For Loop</strong></li>
+<li><strong>Foreach Loop</strong></li>
+<li><strong>While Loop</strong></li>
+<li><strong>Iterator</strong></li>
+<li><strong>Enumeration</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">public class Main &#123;</div><div class="line">public static void main(String[] args) &#123;</div><div class="line">ArrayList&lt;String&gt; arrayList = new ArrayList&lt;&gt;();</div><div class="line">arrayList.add(&quot;Oh&quot;);</div><div class="line">arrayList.add(&quot;my&quot;);</div><div class="line">arrayList.add(&quot;gosh&quot;);</div><div class="line"></div><div class="line">// For Loop</div><div class="line">for (int i = 0; i &lt; arrayList.size(); i++) &#123;</div><div class="line">System.out.println(arrayList.get(i));</div><div class="line">&#125;</div><div class="line"></div><div class="line">// Foreach Loop</div><div class="line">for (String str : arrayList) &#123;</div><div class="line">System.out.println(str);</div><div class="line">&#125;</div><div class="line"></div><div class="line">// While Loop</div><div class="line">int count = 0;</div><div class="line">while (arrayList.size() &gt; count) &#123;</div><div class="line">System.out.println(arrayList.get(count));</div><div class="line">count++;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// Iterator</div><div class="line">Iterator iterator = arrayList.iterator();</div><div class="line">while (iterator.hasNext()) &#123;</div><div class="line">System.out.println(iterator.next());</div><div class="line">&#125;</div><div class="line"></div><div class="line">// Enumeration</div><div class="line">Enumeration&lt;String&gt; enumeration = Collections.enumeration(arrayList);</div><div class="line">while (enumeration.hasMoreElements()) &#123;</div><div class="line">System.out.println(enumeration.nextElement());</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">``` </div><div class="line"></div><div class="line">对于`ArrayList`来说，随机访问比较快。for循环中的`get()`方法，采用的是随机访问的方法；而iterator中的`next()`方法，采用的是顺序访问。因此，`ArrayList`适合用前者，而`LinkedList`则适合用后者。</div><div class="line"></div><div class="line">#### Convert To Array</div></pre></td></tr></table></figure>
+<p>// Convert to array - 1<br>String[] arr = new String[arrayList.size()];<br>for (int i = 0; i &lt; arrayList.size(); i++) {<br>arr[i] = arrayList.get(i);<br>}</p>
+<p>// Convert to array - 2<br>String[] arr1 = arrayList.toArray(new String[arrayList.size()]);</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#### Sort</div><div class="line"></div><div class="line">* **Collections.sort()**</div><div class="line"></div><div class="line">&gt; 按照字母先后顺序或者数字从小到大的顺序排列</div></pre></td></tr></table></figure>
+<p>public class Main {<br>public static void main(String[] args) {<br>ArrayList<string> arrayList = new ArrayList&lt;&gt;();<br>arrayList.add(“Oh”);<br>arrayList.add(“my”);<br>arrayList.add(“gosh”);</string></p>
+<p>Collections.sort(arrayList);</p>
+<p>for (String str : arrayList) {<br>System.out.println(str);<br>}<br>}<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">输出</div></pre></td></tr></table></figure>
+<p>Oh<br>gosh<br>my</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">那么问题来了 ☞ 如何按照递减的顺序排列呢？</div><div class="line"></div><div class="line">* **Collections.sort(arrayList, Collections.reverseOrder());**</div><div class="line"></div><div class="line">这样就是按照递减的方式排列了，或者也可以用以下方式代替 ☞</div></pre></td></tr></table></figure>
+<p>Collections.sort(arrayList);<br>Collections.reverse(arrayList);</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">当然，以上两种适用于简单的数据的排序，当`ArrayList`的存放的数据类型变得更为复杂时呢？</div><div class="line"></div><div class="line">Emmm……比如说这样 ☞</div></pre></td></tr></table></figure>
+<p>class Book  {<br>private String name;<br>private int time;<br>private int pages;</p>
+<p>public Book(String name, int time, int pages) {<br>this.name = name;<br>this.time = time;<br>this.pages = pages;<br>}</p>
+<p>public String getName() {<br>return name;<br>}</p>
+<p>public void setName(String name) {<br>this.name = name;<br>}</p>
+<p>public int getTime() {<br>return time;<br>}</p>
+<p>public void setTime(int time) {<br>this.time = time;<br>}</p>
+<p>public int getPages() {<br>return pages;<br>}</p>
+<p>public void setPages(int pages) {<br>this.pages = pages;<br>}<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">我们已经定义了一种新的数据类型`Book`，现在用`ArrayList`来存放数据 ☞</div></pre></td></tr></table></figure>
+<p>public class Main {<br>public static void main(String args[]){<br>ArrayList<book> arrayList = new ArrayList&lt;&gt;();<br>arrayList.add(new Book(“ABC”, 223, 26));<br>arrayList.add(new Book(“DEF”, 245, 24));<br>arrayList.add(new Book(“GHI”, 557, 32));<br>}<br>}</book></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">现在再用之前的方法肯定是行不通了，试试借助其他办法 ☞</div><div class="line"></div><div class="line">* **Comparable**</div><div class="line"></div><div class="line">通过重写`Comparable`接口的`compareTo()`方法，来比较排序。</div></pre></td></tr></table></figure>
+<p>class Book implements Comparable<book> {<br>private String name;<br>private int time;<br>private int pages;</book></p>
+<p>public Book(String name, int time, int pages) {<br>this.name = name;<br>this.time = time;<br>this.pages = pages;<br>}</p>
+<p>…</p>
+<p>@Override<br>public int compareTo(Book book) {<br>int page =((Book)book).getPages();<br>// For ascending order<br>return this.pages - page;<br>// For descending order<br>// return page - this.pages;</p>
+<p>}</p>
+<p>@Override<br>public String toString() {<br>return “[ name = “ + name + “, time = “ + time + “, pages = “ + pages + “]”;<br>}<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>public class Main {<br>public static void main(String args[]) {<br>ArrayList<book> arrayList = new ArrayList&lt;&gt;();<br>arrayList.add(new Book(“ABC”, 223, 26));<br>arrayList.add(new Book(“DEF”, 245, 24));<br>arrayList.add(new Book(“GHI”, 557, 32));<br>Collections.sort(arrayList);<br>for (Book str : arrayList) {<br>System.out.println(str);<br>}<br>}<br>}</book></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">输出</div></pre></td></tr></table></figure>
+<p>[ name = DEF, time = 245, pages = 24]<br>[ name = ABC, time = 223, pages = 26]<br>[ name = GHI, time = 557, pages = 32]</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">* **Comparator**</div><div class="line"></div><div class="line">或者我们可以重写`Comparator`接口中的`compare()`方法来排序。</div></pre></td></tr></table></figure>
+<p>class Book {<br>private String name;<br>private int time;<br>private int pages;</p>
+<p>public Book(String name, int time, int pages) {<br>this.name = name;<br>this.time = time;<br>this.pages = pages;<br>}</p>
+<p>…</p>
+<p>public static Comparator<book> compareName = new Comparator<book>() {<br>@Override<br>public int compare(Book o1, Book o2) {<br>String name1 = o1.getName();<br>String name2 = o2.getName();<br>// String name = o.getName().toUpperCase();</book></book></p>
+<p>// For ascending order<br>return name1.compareTo(name2);</p>
+<p>// For descending order<br>// return name2.compareTo(name1);<br>}<br>};</p>
+<p>public static Comparator<book> compareTime = new Comparator<book>() {<br>@Override<br>public int compare(Book o1, Book o2) {<br>int time1 = o1.getTime();<br>int time2 = o2.getTime();</book></book></p>
+<p>return time1 - time2;<br>// return time2 - time1;<br>}<br>};</p>
+<p>@Override<br>public String toString() {<br>return “[ name = “ + name + “, time = “ + time + “, pages = “ + pages + “]”;<br>}<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>public class Main {<br>public static void main(String args[]) {<br>ArrayList<book> arrayList = new ArrayList&lt;&gt;();<br>arrayList.add(new Book(“ABC”, 223, 26));<br>arrayList.add(new Book(“DEF”, 245, 24));<br>arrayList.add(new Book(“GHI”, 557, 32));</book></p>
+<p>Collections.sort(arrayList, Book.compareName);<br>System.out.println(“Sorted by name”);<br>for (Book str : arrayList) {<br>System.out.println(str);<br>}</p>
+<p>System.out.println(“Sorted by time”);<br>Collections.sort(arrayList, Book.compareTime);<br>for (Book str : arrayList) {<br>System.out.println(str);<br>}<br>}<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">输出</div></pre></td></tr></table></figure>
+<p>Sorted by name<br>[ name = ABC, time = 223, pages = 26]<br>[ name = DEF, time = 245, pages = 24]<br>[ name = GHI, time = 557, pages = 32]<br>Sorted by time<br>[ name = ABC, time = 223, pages = 26]<br>[ name = DEF, time = 245, pages = 24]<br>[ name = GHI, time = 557, pages = 32]</p>
+<p>```</p>
+<p>未完待续。。。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/31/《Thinking in Java》读书笔记/" rel="next" title="《Thinking in Java》读书笔记">
+                <i class="fa fa-chevron-left"></i> 《Thinking in Java》读书笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="lwxwl" />
+          <p class="site-author-name" itemprop="name">lwxwl</p>
+           
+              <p class="site-description motion-element" itemprop="description">好好学习，天天向上(๑•̀ㅂ•́)و✧</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lwxwl" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/_lwxwl_" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://m.weibo.cn/u/5318684652" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JAVA-COLLECTIONS"><span class="nav-number">1.</span> <span class="nav-text">JAVA COLLECTIONS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayList"><span class="nav-number">1.1.</span> <span class="nav-text">ArrayList</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Method"><span class="nav-number">1.1.1.</span> <span class="nav-text">Method</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Initialization"><span class="nav-number">1.1.2.</span> <span class="nav-text">Initialization</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Iteration"><span class="nav-number">1.1.3.</span> <span class="nav-text">Iteration</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lwxwl</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+<script type="text/javascript" color="176,23,31" opacity='1' zIndex="-1" count="66" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+
+</body>
+</html>
