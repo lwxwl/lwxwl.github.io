@@ -99,7 +99,7 @@
 <meta property="og:description" content="What should we learn ? 了解面向对象编程的思想 熟悉Java基本语法，能够编写简单程序 熟悉Java常用的Api 学习Java中继承和接口的使用，了解父类和子类的关系  What should we do ?The First Task编程实现：输入两个数，要求能够输出这两个数的最大公约数和最小公倍数。 嗯，这个高中应该学过怎么算 ☞  Greatest Common Div">
 <meta property="og:image" content="http://img.youbiaoqing.com/u/190e6b1e7fe22c8908ac71046fb97b41.jpg">
 <meta property="og:image" content="https://ws4.sinaimg.cn/large/9150e4e5ly1fjh8yh4r00j2082088wgv.jpg">
-<meta property="og:updated_time" content="2017-10-27T09:00:27.000Z">
+<meta property="og:updated_time" content="2017-10-27T09:50:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="新人任务（第一周至第三周）">
 <meta name="twitter:description" content="What should we learn ? 了解面向对象编程的思想 熟悉Java基本语法，能够编写简单程序 熟悉Java常用的Api 学习Java中继承和接口的使用，了解父类和子类的关系  What should we do ?The First Task编程实现：输入两个数，要求能够输出这两个数的最大公约数和最小公倍数。 嗯，这个高中应该学过怎么算 ☞  Greatest Common Div">
@@ -361,7 +361,7 @@
 <p>很遗憾，这和我们直接<code>System.out.println(array);</code>的结果一样，没有得到我们想要的结果。</p>
 <p>这是因为在<code>Java</code>中arrays并没有继承<code>Object.toString()</code>，我们得到的输出实际上是<code>getClass().getName() + &#39;@&#39; + Integer.toHexString(hashCode())</code>形式的数组的内存地址。</p>
 <p>那么我们就可以借助<code>Java API</code>中提供的<code>Arrays</code>类，在<code>java.util</code>包中，更改代码：</p>
-<p><code>System.out.println(Arrays.toString(array));</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">System.out.println(Arrays.toString(array));</div></pre></td></tr></table></figure>
 <p>输出：</p>
 <blockquote>
 <p>[1, 2, 3]</p>
@@ -402,7 +402,15 @@
 <p>（3）你认为这个程序是用来做什么的？</p>
 <p><em>☞ 类似于收银的小程序。通过输入商品名称、卖价、数量并进行相应运算，返回商品名称、收费总额、单价等。</em></p>
 <p>（4）[选做] 写一个调用Purchase类实现其功能的主函数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">public static void main(String[] args) &#123;</div><div class="line">        Purchase purchase = new Purchase();</div><div class="line"></div><div class="line">        purchase.readInput();</div><div class="line"></div><div class="line">        purchase.setName(&quot;WATER&quot;);</div><div class="line">        purchase.setPrice(1, 3.2);</div><div class="line">        purchase.setNumberBought(2);</div><div class="line">        String name = purchase.getName();</div><div class="line">        double unitCost = purchase.getUnitCost();</div><div class="line">        double totalCost = purchase.getTotalCost();</div><div class="line">        int numberBought = purchase.getNumberBought();</div><div class="line">        System.out.println(numberBought + &quot; &quot; + name + &quot; at &quot; + unitCost);</div><div class="line">        System.out.println(&quot;totally: &quot; + totalCost);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">public static void main(String[] args) &#123;</div><div class="line">    Purchase purchase = new Purchase();</div><div class="line">    purchase.readInput();</div><div class="line">    String name = purchase.getName();</div><div class="line">    double unitCost = purchase.getUnitCost();</div><div class="line">    double totalCost = purchase.getTotalCost();</div><div class="line">    int numberBought = purchase.getNumberBought();</div><div class="line">    System.out.println();</div><div class="line">    System.out.println(numberBought + &quot; &quot; + name + &quot; at &quot; + unitCost);</div><div class="line">    System.out.println(&quot;totally: &quot; + totalCost);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>输出：</p>
+<blockquote>
+<p>Enter name of item you are purchasing:</p>
+<p><font color="#007F00">spicy bar</font><br>Enter price of item as two numbers.<br>For example, 3 for $2.99 is entered as<br>3 2.99<br>Enter price of item as two numbers, now:</p>
+<p><font color="#007F00">2 1</font><br>please enter the number bought</p>
+<p><font color="#007F00">100</font><br>100 spicy bar<br>at 2 for $1.0</p>
+<p>100 spicy bar at 0.5<br>totally: 50.0</p>
+</blockquote>
 <h3 id="The-Fourth-Task"><a href="#The-Fourth-Task" class="headerlink" title="The Fourth Task"></a>The Fourth Task</h3><p>机试题没有完成的继续完成机试题，完成机试题的思考以下几个问题</p>
 <p>（1）这个程序的优点在什么地方？</p>
 <p>（2）这个程序的缺点在什么地方？还有那些细节可以改进？</p>
