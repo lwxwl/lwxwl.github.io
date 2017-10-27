@@ -1,0 +1,800 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Java," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="What should we learn ? 了解面向对象编程的思想 熟悉Java基本语法，能够编写简单程序 熟悉Java常用的Api 学习Java中继承和接口的使用，了解父类和子类的关系  What should we do ?The First Task1、编程实现：输入两个数，要求能够输出这两个数的最大公约数和最小公倍数。  Greatest Common Divisor  1234567/">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="新人任务（第一周至第三周）">
+<meta property="og:url" content="https://lwxwl.github.io/2017/10/27/新人任务（第一周至第三周）/index.html">
+<meta property="og:site_name" content="lwxwl&#39;s blog">
+<meta property="og:description" content="What should we learn ? 了解面向对象编程的思想 熟悉Java基本语法，能够编写简单程序 熟悉Java常用的Api 学习Java中继承和接口的使用，了解父类和子类的关系  What should we do ?The First Task1、编程实现：输入两个数，要求能够输出这两个数的最大公约数和最小公倍数。  Greatest Common Divisor  1234567/">
+<meta property="og:image" content="http://img.youbiaoqing.com/u/190e6b1e7fe22c8908ac71046fb97b41.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/9150e4e5ly1fjh8yh4r00j2082088wgv.jpg">
+<meta property="og:updated_time" content="2017-10-27T08:53:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="新人任务（第一周至第三周）">
+<meta name="twitter:description" content="What should we learn ? 了解面向对象编程的思想 熟悉Java基本语法，能够编写简单程序 熟悉Java常用的Api 学习Java中继承和接口的使用，了解父类和子类的关系  What should we do ?The First Task1、编程实现：输入两个数，要求能够输出这两个数的最大公约数和最小公倍数。  Greatest Common Divisor  1234567/">
+<meta name="twitter:image" content="http://img.youbiaoqing.com/u/190e6b1e7fe22c8908ac71046fb97b41.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://lwxwl.github.io/2017/10/27/新人任务（第一周至第三周）/"/>
+
+
+
+
+
+  <title>新人任务（第一周至第三周） | lwxwl's blog</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">lwxwl's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">To Be A Better Man</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://lwxwl.github.io/2017/10/27/新人任务（第一周至第三周）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lwxwl">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lwxwl's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">新人任务（第一周至第三周）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-27T00:00:00+08:00">
+                2017-10-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="What-should-we-learn"><a href="#What-should-we-learn" class="headerlink" title="What should we learn ?"></a>What should we learn ?</h2><ul>
+<li>了解面向对象编程的思想</li>
+<li>熟悉Java基本语法，能够编写简单程序</li>
+<li>熟悉Java常用的Api</li>
+<li>学习Java中继承和接口的使用，了解父类和子类的关系</li>
+</ul>
+<h2 id="What-should-we-do"><a href="#What-should-we-do" class="headerlink" title="What should we do ?"></a>What should we do ?</h2><h3 id="The-First-Task"><a href="#The-First-Task" class="headerlink" title="The First Task"></a>The First Task</h3><p><strong>1、编程实现：输入两个数，要求能够输出这两个数的最大公约数和最小公倍数。</strong></p>
+<ul>
+<li><code>Greatest Common Divisor</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line"> * Using Euclidean algorithm and Recursive algorithm.</div><div class="line"> */</div><div class="line"> </div><div class="line">public static int gcd(int a, int b) &#123;</div><div class="line">    return b == 0 ? a : gcd(b, a % b);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>If we don’t use the Recursive algorithm, it will be equal to:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">public static int gcd(int a, int b) &#123;</div><div class="line">    while (b &gt; 0) &#123;</div><div class="line">        int temp = b;</div><div class="line">        b = a % b;</div><div class="line">        a = temp;</div><div class="line">    &#125;</div><div class="line">    return a;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>Least Common Multiple</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line"> * lcm(a, b) = |a * b| / gcd(a, b)</div><div class="line"> */</div><div class="line">     </div><div class="line">public static int lcm(int a, int b) &#123;</div><div class="line">    return a * (b / gcd(a, b));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="The-Second-Task"><a href="#The-Second-Task" class="headerlink" title="The Second Task"></a>The Second Task</h3><p><strong>2、 编程实现：将数组作为参数传递给一个方法，该方法将这个数组的元素全部显示出来。</strong></p>
+<p>我们最容易想到的可能就是通过循环来写，比如说这个样子 ☞</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">public class Array &#123;</div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        System.out.println(&quot;Please input the amount of members in the array: &quot;);</div><div class="line">        Scanner scanner = new Scanner(System.in);</div><div class="line">        int num = scanner.nextInt();</div><div class="line">        int array[] = new int[num];</div><div class="line">        System.out.println(&quot;Please input the members in the array: &quot;);</div><div class="line">        for (int i = 0; i &lt; num; i++) &#123;</div><div class="line">            array[i] = scanner.nextInt();</div><div class="line">        &#125;</div><div class="line">        scanner.close();</div><div class="line">        showArray(array);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static void showArray(int array[]) &#123;</div><div class="line">        // for loop()</div><div class="line">        for (int i = 0; i &lt; array.length; i++) &#123;</div><div class="line">            System.out.printf(&quot;%d &quot;, array[i]);</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        // also</div><div class="line">        for (int number : array) &#123;</div><div class="line">            System.out.println(number);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>但是其实可以简单一点 ，我们可能会想到将数组转换成字符串来输出，想到就可以先试试 ☞</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">public class Main &#123;</div><div class="line"></div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        int[] testArray = &#123;1, 2, 3&#125;;</div><div class="line">        printArray(testArray);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    private static void printArray(int[] array) &#123;</div><div class="line">        System.out.println(array.toString());</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>输出：</p>
+<blockquote>
+<p>[I@60e53b93</p>
+</blockquote>
+<p>很遗憾，这和我们直接<code>System.out.println(array);</code>的结果一样，没有得到我们想要的结果。</p>
+<p>这是因为在<code>Java</code>中arrays并没有继承<code>Object.toString()</code>，我们得到的输出实际上是<code>getClass().getName() + &#39;@&#39; + Integer.toHexString(hashCode())</code>形式的数组的内存地址。</p>
+<p>那么我们就可以借助<code>Java API</code>中提供的<code>Arrays</code>类，在<code>java.util</code>包中，更改代码：</p>
+<p><code>System.out.println(Arrays.toString(array));</code></p>
+<p>输出：</p>
+<blockquote>
+<p>[1, 2, 3]</p>
+</blockquote>
+<p>所以我们得到了比循环更简单的打印方式：<strong><code>Arrays.toString()</code></strong>。</p>
+<p>但是问题又来了，如果我想要打印的数组不是一维数组会怎么样呢？比如说 ☞</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">public class Main &#123;</div><div class="line"></div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        String[][] testArray = new String[][] &#123;&#123;&quot;Why&quot;, &quot;doesn&apos;t&quot;&#125;, &#123;&quot;it&quot;,&quot;rain&quot;, &quot;on&quot;, &quot;Wednesday&quot;&#125;&#125;;</div><div class="line">        printArray(testArray);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    private static void printArray(String[][] array) &#123;</div><div class="line">        System.out.println(Arrays.toString(array));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>输出：</p>
+<blockquote>
+<p>[[Ljava.lang.String;@60e53b93, [Ljava.lang.String;@5e2de80c]</p>
+</blockquote>
+<p><code>Arrays.toString()</code>不可行了，我们换成<strong><code>Arrays.deepToString()</code></strong></p>
+<p>输出：</p>
+<blockquote>
+<p>[[Why, doesn’t], [it, rain, on, Wednesday]]</p>
+</blockquote>
+<p>看着这两次的输出，总感觉比用循环写多了点啥(ಗ ‸ ಗ )，没错，就是 ☞ <code>[]</code>。看它不顺眼👀，想删掉它，那怎么办呢？</p>
+<p>（你麻烦事怎么这么多！逃……）</p>
+<p><img src="http://img.youbiaoqing.com/u/190e6b1e7fe22c8908ac71046fb97b41.jpg" alt=""></p>
+<p>于是，翻了翻<code>String</code>类<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#join-java.lang.CharSequence-java.lang.CharSequence...-" target="_blank" rel="external">🔗</a>，看到了很多有趣的方法（自己怎么都没用过？），然后找到了<strong><code>join()</code></strong>这个方法。</p>
+<p>试着用一下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">public class Main &#123;</div><div class="line"></div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        String[] testArray = new String[]&#123;&quot;I&quot;, &quot;have to&quot;, &quot;go to&quot;, &quot;P.E. class&quot;&#125;;</div><div class="line">        printArray(testArray);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    private static void printArray(String[] array) &#123;</div><div class="line">        String delimiter = &quot; &quot;;</div><div class="line">        System.out.print(String.join(delimiter, array));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>输出：</p>
+<blockquote>
+<p>I have to go to P.E. class</p>
+</blockquote>
+<p>继而我们又能发现<code>StringJoiner</code>这个类可以用来控制输出格式，这个就不给例子了，感兴趣的可以自己试试看。</p>
+<p><img src="https://ws4.sinaimg.cn/large/9150e4e5ly1fjh8yh4r00j2082088wgv.jpg" alt=""></p>
+<p>然后，我们又能发现有很多很多种方法，比如说用<code>Java 8 - Stream.collect(joining()), Stream.forEach</code>写：</p>
+<p><code>Arrays.stream(array).forEach(System.out::println);</code></p>
+<h3 id="The-Third-Task"><a href="#The-Third-Task" class="headerlink" title="The Third Task"></a>The Third Task</h3><p><strong>3、读下列程序：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div></pre></td><td class="code"><pre><div class="line">import java.util.Scanner;</div><div class="line"></div><div class="line">public class Purchase &#123;</div><div class="line"></div><div class="line">    private double groundPrice;</div><div class="line">    private int groundCount;</div><div class="line">    private int numberBought;</div><div class="line">    private String name;</div><div class="line"></div><div class="line">    public void setName(String newName) &#123;</div><div class="line">        name = newName;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void setPrice(int count, double costForCount) &#123;</div><div class="line">        if ((count &lt;= 0) || (costForCount &lt;= 0)) &#123;</div><div class="line">            System.out.println(&quot;&quot;);</div><div class="line">            System.exit(0);</div><div class="line">        &#125; else &#123;</div><div class="line">            groundCount = count;</div><div class="line">            groundPrice = costForCount;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void setNumberBought(int number) &#123;</div><div class="line">        if (number &lt;= 0) &#123;</div><div class="line">            System.out.println(&quot;&quot;);</div><div class="line">            System.exit(0);</div><div class="line">        &#125; else</div><div class="line">            numberBought = number;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void readInput() &#123;</div><div class="line">        Scanner keyboard = new Scanner(System.in);</div><div class="line">        System.out.println(&quot;Enter name of item you are purchasing: &quot;);</div><div class="line">        name = keyboard.nextLine();</div><div class="line">        System.out.println(&quot;Enter price of item as two numbers.&quot;);</div><div class="line">        System.out.println(&quot;For example, 3 for $2.99 is entered as&quot;);</div><div class="line">        System.out.println(&quot;3 2.99&quot;);</div><div class="line">        System.out.println(&quot;Enter price of item as two numbers, now:&quot;);</div><div class="line">        groundCount = keyboard.nextInt();</div><div class="line">        groundPrice = keyboard.nextDouble();</div><div class="line">        while (groundCount &lt;= 0 &amp;&amp; groundPrice &lt;= 0) &#123;</div><div class="line">            System.out.println(&quot;Both numvers must be positive. Try again.&quot;);</div><div class="line">            System.out.println(&quot;Enter price of item as two numbers.&quot;);</div><div class="line">            System.out.println(&quot;For example, 3 for $2.99 is entered as&quot;);</div><div class="line">            System.out.println(&quot;3 2.99&quot;);</div><div class="line">            System.out.println(&quot;Enter price of item as two numbers, now:&quot;);</div><div class="line">            groundCount = keyboard.nextInt();</div><div class="line">            groundPrice = keyboard.nextDouble();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        System.out.println(&quot;please enter the number bought&quot;);</div><div class="line">        numberBought = keyboard.nextInt();</div><div class="line">        while (numberBought &lt;= 0) &#123;</div><div class="line">            System.out.println(&quot;&quot;);</div><div class="line">            System.out.println(&quot;&quot;);</div><div class="line">            numberBought = keyboard.nextInt();</div><div class="line">        &#125;</div><div class="line">        writeOutput();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void writeOutput() &#123;</div><div class="line">        System.out.println(numberBought + &quot; &quot; + name);</div><div class="line">        System.out.println(&quot;at &quot; + groundCount + &quot;for $&quot; + groundPrice);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public String getName() &#123;</div><div class="line">        return name;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public double getTotalCost() &#123;</div><div class="line">        return ((groundPrice / groundCount) * numberBought);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public double getUnitCost() &#123;</div><div class="line">        return (groundPrice / groundCount);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public int getNumberBought() &#123;</div><div class="line">        return numberBought;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>（1）变量<code>groundCount</code>、 <code>groundPrice</code>、 <code>numberBought</code>分别代表什么？</p>
+<p><em>☞  <code>groundCount</code> for <code>groundPrice</code>大概就是“三块钱两斤”这样，然后<code>numberBought</code>是购买的数量。</em></p>
+<p>（2）总结上述代码中出现的类的特点(如信息是如何传递的之类,越多越好)</p>
+<p><em>开放性答案。</em></p>
+<p>（3）你认为这个程序是用来做什么的？</p>
+<p><em>☞ 类似于收银的小程序。通过输入商品名称、卖价、数量并进行相应运算，返回商品名称、收费总额、单价等。</em></p>
+<p>（4）[选做] 写一个调用Purchase类实现其功能的主函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">public static void main(String[] args) &#123;</div><div class="line">        Purchase purchase = new Purchase();</div><div class="line"></div><div class="line">        purchase.readInput();</div><div class="line"></div><div class="line">        purchase.setName(&quot;WATER&quot;);</div><div class="line">        purchase.setPrice(1, 3.2);</div><div class="line">        purchase.setNumberBought(2);</div><div class="line">        String name = purchase.getName();</div><div class="line">        double unitCost = purchase.getUnitCost();</div><div class="line">        double totalCost = purchase.getTotalCost();</div><div class="line">        int numberBought = purchase.getNumberBought();</div><div class="line">        System.out.println(numberBought + &quot; &quot; + name + &quot; at &quot; + unitCost);</div><div class="line">        System.out.println(&quot;totally: &quot; + totalCost);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h3 id="The-Fourth-Task"><a href="#The-Fourth-Task" class="headerlink" title="The Fourth Task"></a>The Fourth Task</h3><p>4、机试题没有完成的继续完成机试题，完成机试题的思考以下几个问题</p>
+<p>（1）这个程序的优点在什么地方？</p>
+<p>（2）这个程序的缺点在什么地方？还有那些细节可以改进？</p>
+<p>这个就留给你们自己说啦 ♪ヾ(＇∀＇o)ﾉ</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/11/Summary/" rel="next" title="Summary">
+                <i class="fa fa-chevron-left"></i> Summary
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="lwxwl" />
+          <p class="site-author-name" itemprop="name">lwxwl</p>
+           
+              <p class="site-description motion-element" itemprop="description">好好学习，天天向上(๑•̀ㅂ•́)و✧</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lwxwl" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/_lwxwl_" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://m.weibo.cn/u/5318684652" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#What-should-we-learn"><span class="nav-number">1.</span> <span class="nav-text">What should we learn ?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-should-we-do"><span class="nav-number">2.</span> <span class="nav-text">What should we do ?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-First-Task"><span class="nav-number">2.1.</span> <span class="nav-text">The First Task</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Second-Task"><span class="nav-number">2.2.</span> <span class="nav-text">The Second Task</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Third-Task"><span class="nav-number">2.3.</span> <span class="nav-text">The Third Task</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Fourth-Task"><span class="nav-number">2.4.</span> <span class="nav-text">The Fourth Task</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lwxwl</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+<script type="text/javascript" color="176,23,31" opacity='1' zIndex="-1" count="66" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+
+</body>
+</html>
