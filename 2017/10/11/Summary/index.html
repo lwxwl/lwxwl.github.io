@@ -97,7 +97,7 @@
 <meta property="og:url" content="https://lwxwl.github.io/2017/10/11/Summary/index.html">
 <meta property="og:site_name" content="lwxwl&#39;s blog">
 <meta property="og:description" content="JAVA COLLECTIONSArrayList参考链接 🔗  继承自List接口，允许添加多个null元素及重复元素，并保持元素插入顺序  Example: 1234567891011121314151617181920212223import java.util.ArrayList;public class Main &amp;#123;     public static void main(S">
-<meta property="og:updated_time" content="2017-11-03T09:28:47.000Z">
+<meta property="og:updated_time" content="2017-11-03T12:51:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Summary">
 <meta name="twitter:description" content="JAVA COLLECTIONSArrayList参考链接 🔗  继承自List接口，允许添加多个null元素及重复元素，并保持元素插入顺序  Example: 1234567891011121314151617181920212223import java.util.ArrayList;public class Main &amp;#123;     public static void main(S">
@@ -432,7 +432,7 @@
 <li><strong>Iterator</strong></li>
 <li><strong>Enumeration</strong></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">public class Main &#123;</div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        ArrayList&lt;String&gt; arrayList = new ArrayList&lt;&gt;();</div><div class="line">        arrayList.add(&quot;Oh&quot;);</div><div class="line">        arrayList.add(&quot;my&quot;);</div><div class="line">        arrayList.add(&quot;gosh&quot;);</div><div class="line"></div><div class="line">        // For Loop</div><div class="line">        for (int i = 0; i &lt; arrayList.size(); i++) &#123;</div><div class="line">            System.out.println(arrayList.get(i));</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // Foreach Loop</div><div class="line">        for (String str : arrayList) &#123;</div><div class="line">            System.out.println(str);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // While Loop</div><div class="line">        int count = 0;</div><div class="line">        while (arrayList.size() &gt; count) &#123;</div><div class="line">            System.out.println(arrayList.get(count));</div><div class="line">            count++;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // Iterator</div><div class="line">        Iterator iterator = arrayList.iterator();</div><div class="line">        while (iterator.hasNext()) &#123;</div><div class="line">            System.out.println(iterator.next());</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // Enumeration</div><div class="line">        Enumeration&lt;String&gt; enumeration = Collections.enumeration(arrayList);</div><div class="line">            System.out.println(enumeration.nextElement());</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">public class Main &#123;</div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        ArrayList&lt;String&gt; arrayList = new ArrayList&lt;&gt;();</div><div class="line">        arrayList.add(&quot;Oh&quot;);</div><div class="line">        arrayList.add(&quot;my&quot;);</div><div class="line">        arrayList.add(&quot;gosh&quot;);</div><div class="line"></div><div class="line">        // For Loop</div><div class="line">        for (int i = 0; i &lt; arrayList.size(); i++) &#123;</div><div class="line">            System.out.println(arrayList.get(i));</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // Foreach Loop</div><div class="line">        for (String str : arrayList) &#123;</div><div class="line">            System.out.println(str);</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        // forEach()</div><div class="line">        arrayList.forEach(array -&gt; System.out.println(array));</div><div class="line">        arrayList.forEach(System.out::println);</div><div class="line"></div><div class="line">        // While Loop</div><div class="line">        int count = 0;</div><div class="line">        while (arrayList.size() &gt; count) &#123;</div><div class="line">            System.out.println(arrayList.get(count));</div><div class="line">            count++;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // Iterator</div><div class="line">        Iterator iterator = arrayList.iterator();</div><div class="line">        while (iterator.hasNext()) &#123;</div><div class="line">            System.out.println(iterator.next());</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // Enumeration</div><div class="line">        Enumeration&lt;String&gt; enumeration = Collections.enumeration(arrayList);</div><div class="line">            System.out.println(enumeration.nextElement());</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>对于<code>ArrayList</code>来说，随机访问比较快。for循环中的<code>get()</code>方法，采用的是随机访问的方法；而iterator中的<code>next()</code>方法，采用的是顺序访问。因此，<code>ArrayList</code>适合用前者，而<code>LinkedList</code>则适合用后者。</p>
 <h4 id="Conversions"><a href="#Conversions" class="headerlink" title="Conversions"></a>Conversions</h4><ul>
 <li><code>ArrayList</code> ➣ <code>String Array</code></li>
@@ -543,6 +543,65 @@
 </tr>
 </tbody>
 </table>
+<h3 id="Java-迭代器"><a href="#Java-迭代器" class="headerlink" title="Java 迭代器"></a>Java 迭代器</h3><p>迭代器是一个轻量级对象，可以遍历并选择序列中的对象。</p>
+<blockquote>
+<p>将遍历序列的操作与底层序列的结构分离，统一了对容器的访问方式。</p>
+</blockquote>
+<h4 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h4><p><strong>Iterator</strong></p>
+<p>只能单向移动，在遍历的时候不允许在底层集合进行增删元素的操作（通过迭代器本身操作除外）。</p>
+<ul>
+<li><code>boolean hasNext()</code></li>
+</ul>
+<blockquote>
+<p>判断是否有更多元素</p>
+</blockquote>
+<ul>
+<li><code>E next()</code></li>
+</ul>
+<blockquote>
+<p>返回下一个元素</p>
+</blockquote>
+<p>如果没有下一个元素，则抛出<code>NoSuchElementException</code>异常。</p>
+<ul>
+<li><code>void remove()</code></li>
+</ul>
+<blockquote>
+<p>删除迭代器返回的底层集合的最后一个元素，只能在每次调用<code>next()</code>方法后使用一次</p>
+</blockquote>
+<p>如果调用的不是迭代器中删除元素的方法，而是通过底层集合自带的删除元素的方法，会抛出<code>UnsupportedOperationException</code>异常。</p>
+<p>如果在调用之前没有返回元素，会抛出<code>IllegalStateException</code>异常。</p>
+<p><strong>ListIterator</strong></p>
+<p><code>Iterator</code>的子类，只能访问各种<code>List</code>类，但是功能更加强大，可以双向移动。</p>
+<ul>
+<li><p><code>void add(E e)</code></p>
+</li>
+<li><p><code>boolean hasNext()</code></p>
+</li>
+<li><p><code>boolean hasPrevious()</code></p>
+</li>
+<li><p><code>E next()</code></p>
+</li>
+<li><p><code>int nextIndex()</code></p>
+</li>
+<li><p><code>E previous()</code></p>
+</li>
+<li><p><code>int previousIndex()</code></p>
+</li>
+<li><p><code>void remove()</code></p>
+</li>
+<li><p><code>void set(E e)</code></p>
+</li>
+</ul>
+<p><strong>Iterator 和 Enumeration 的区别</strong></p>
+<blockquote>
+<p>Iterator允许在遍历的时候删除底层集合的元素</p>
+</blockquote>
+<p>除此之外，就是方法命名更加规范，用<code>hasNext()</code>替代了<code>hasMoreElements()</code>，用<code>next()</code>替代了<code>nextElement()</code>。</p>
+<h4 id="迭代器接口"><a href="#迭代器接口" class="headerlink" title="迭代器接口"></a>迭代器接口</h4><p>迭代器有<code>Iterator</code>和<code>Iterable</code>两个接口。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">public interface Iterable&lt;T&gt; &#123;</div><div class="line">    Iterator&lt;T&gt; iterator();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">public interface Iterator&lt;E&gt; &#123;</div><div class="line">    boolean hasNext();</div><div class="line">    E next();</div><div class="line">    void remove();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>Iterable</code>是<code>Iterator</code>接口的包装，超级接口，实现上更简洁，并且可以允许实现此接口的对象成为foreach语句的目标。除此之外，<code>Iterable</code>每次调用时返回一个从头开始的迭代器，多个迭代器之间互不干扰，不会出现当前迭代位置混乱的不可预知错误。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">public class Main implements Iterable&lt;Book&gt; &#123;</div><div class="line">    private final List&lt;Book&gt; bList = new ArrayList&lt;&gt;();</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public Iterator&lt;Book&gt; iterator() &#123;</div><div class="line">        return new Iterator&lt;Book&gt; () &#123;</div><div class="line">            private final Iterator&lt;Book&gt; iter = bList.iterator();</div><div class="line"></div><div class="line">            @Override</div><div class="line">            public boolean hasNext() &#123;</div><div class="line">                return iter.hasNext();</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            @Override</div><div class="line">            public Book next() &#123;</div><div class="line">                return iter.next();</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            @Override</div><div class="line">            public void remove() &#123;</div><div class="line">                throw new UnsupportedOperationException(&quot;no changes allowed&quot;);</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="Static-Import"><a href="#Static-Import" class="headerlink" title="Static Import"></a>Static Import</h2><blockquote>
 <p>import static com…ClassName.*（／静态方法名）;</p>
 </blockquote>
@@ -759,7 +818,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JAVA-COLLECTIONS"><span class="nav-number">1.</span> <span class="nav-text">JAVA COLLECTIONS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayList"><span class="nav-number">1.1.</span> <span class="nav-text">ArrayList</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Method"><span class="nav-number">1.1.1.</span> <span class="nav-text">Method</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Initialization"><span class="nav-number">1.1.2.</span> <span class="nav-text">Initialization</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Iteration"><span class="nav-number">1.1.3.</span> <span class="nav-text">Iteration</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Conversions"><span class="nav-number">1.1.4.</span> <span class="nav-text">Conversions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sort"><span class="nav-number">1.1.5.</span> <span class="nav-text">Sort</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Remove-Duplicate-Elements"><span class="nav-number">1.1.6.</span> <span class="nav-text">Remove Duplicate Elements</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Comparable-amp-Comparator"><span class="nav-number">1.2.</span> <span class="nav-text">Comparable & Comparator</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Static-Import"><span class="nav-number">2.</span> <span class="nav-text">Static Import</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Polymorphism"><span class="nav-number">3.</span> <span class="nav-text">Polymorphism</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JAVA-COLLECTIONS"><span class="nav-number">1.</span> <span class="nav-text">JAVA COLLECTIONS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayList"><span class="nav-number">1.1.</span> <span class="nav-text">ArrayList</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Method"><span class="nav-number">1.1.1.</span> <span class="nav-text">Method</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Initialization"><span class="nav-number">1.1.2.</span> <span class="nav-text">Initialization</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Iteration"><span class="nav-number">1.1.3.</span> <span class="nav-text">Iteration</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Conversions"><span class="nav-number">1.1.4.</span> <span class="nav-text">Conversions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sort"><span class="nav-number">1.1.5.</span> <span class="nav-text">Sort</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Remove-Duplicate-Elements"><span class="nav-number">1.1.6.</span> <span class="nav-text">Remove Duplicate Elements</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Comparable-amp-Comparator"><span class="nav-number">1.2.</span> <span class="nav-text">Comparable & Comparator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-迭代器"><span class="nav-number">1.3.</span> <span class="nav-text">Java 迭代器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#迭代器"><span class="nav-number">1.3.1.</span> <span class="nav-text">迭代器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#迭代器接口"><span class="nav-number">1.3.2.</span> <span class="nav-text">迭代器接口</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Static-Import"><span class="nav-number">2.</span> <span class="nav-text">Static Import</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Polymorphism"><span class="nav-number">3.</span> <span class="nav-text">Polymorphism</span></a></li></ol></div>
             
 
           </div>
