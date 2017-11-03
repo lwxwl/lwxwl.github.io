@@ -97,7 +97,7 @@
 <meta property="og:url" content="https://lwxwl.github.io/2017/10/11/Summary/index.html">
 <meta property="og:site_name" content="lwxwl&#39;s blog">
 <meta property="og:description" content="JAVA COLLECTIONSArrayList参考链接 🔗  继承自List接口，允许添加多个null元素及重复元素，并保持元素插入顺序  Example: 1234567891011121314151617181920212223import java.util.ArrayList;public class Main &amp;#123;     public static void main(S">
-<meta property="og:updated_time" content="2017-10-31T09:16:15.000Z">
+<meta property="og:updated_time" content="2017-11-03T09:22:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Summary">
 <meta name="twitter:description" content="JAVA COLLECTIONSArrayList参考链接 🔗  继承自List接口，允许添加多个null元素及重复元素，并保持元素插入顺序  Example: 1234567891011121314151617181920212223import java.util.ArrayList;public class Main &amp;#123;     public static void main(S">
@@ -506,6 +506,43 @@
 <blockquote>
 <p>[The, road, not, taken]</p>
 </blockquote>
+<h3 id="Comparable-amp-Comparator"><a href="#Comparable-amp-Comparator" class="headerlink" title="Comparable &amp; Comparator"></a>Comparable &amp; Comparator</h3><p>在之前的<code>ArrayList</code>的排序中就已经用到了这两个接口来进行比较排序，这里主要写两者的区别。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">Comparable</th>
+<th style="text-align:center">Comparator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Package</td>
+<td style="text-align:center">java.lang.Comparable</td>
+<td style="text-align:center">java.util.Comparator</td>
+</tr>
+<tr>
+<td style="text-align:center">Implementation</td>
+<td style="text-align:center">Class whose objects to be sorted must implement this interface</td>
+<td style="text-align:center">Class whose objects to be sorted do not need to implement this interface</td>
+</tr>
+<tr>
+<td style="text-align:center">Sorting Method</td>
+<td style="text-align:center"><font color="#750000"><code>int compareTo(Object o1)</code></font> This method compares this object with o1 object and returns a integer. Its value: <code>positive</code> ➣ this object &gt; o1; <code>zero</code> ➣ this object = o1; <code>negative</code> ➣ this object &lt; o1</td>
+<td style="text-align:center"><font color="#750000"><code>int cpmpare(Object o1, Object o2)</code></font> This method compares o1 with o2 and returns a integer. Its value: <code>positive</code> ➣ o1 &gt; o2; <code>zero</code> ➣ o1 = o2; <code>negative</code> ➣ o1 &lt; o2</td>
+</tr>
+<tr>
+<td style="text-align:center">Calling Method</td>
+<td style="text-align:center"><font color="#750000"><code>Collections.sort(List)</code></font></td>
+<td style="text-align:center"><font color="#750000"><code>Collections.sort(List, Comparator)</code></font></td>
+</tr>
+<tr>
+<td style="text-align:center">Sorting Logic</td>
+<td style="text-align:center">Sorting logic must be in same class whose objects are being sorted</td>
+<td style="text-align:center">Sorting logic is in seperate class</td>
+</tr>
+</tbody>
+</table>
 <h2 id="Static-Import"><a href="#Static-Import" class="headerlink" title="Static Import"></a>Static Import</h2><blockquote>
 <p>import static com…ClassName.*（／静态方法名）;</p>
 </blockquote>
@@ -514,6 +551,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public class Main &#123;</div><div class="line"></div><div class="line">    public static void main(String[] args) &#123;</div><div class="line"></div><div class="line">        double a = Math.sqrt(4);</div><div class="line">        System.out.print(a);</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>Using Static Imports ☞</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">import static java.lang.Math.*;</div><div class="line">import static java.lang.System.out;</div><div class="line"></div><div class="line">public class Main &#123;</div><div class="line"></div><div class="line">    public static void main(String[] args) &#123;</div><div class="line"></div><div class="line">        double a = sqrt(4);</div><div class="line">        out.print(a);</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Polymorphism"><a href="#Polymorphism" class="headerlink" title="Polymorphism"></a>Polymorphism</h2><p>Explain polymorphism in one sentence ➣</p>
+<blockquote>
+</blockquote>
 <p>未完待续。。。</p>
 
       
@@ -718,7 +758,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JAVA-COLLECTIONS"><span class="nav-number">1.</span> <span class="nav-text">JAVA COLLECTIONS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayList"><span class="nav-number">1.1.</span> <span class="nav-text">ArrayList</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Method"><span class="nav-number">1.1.1.</span> <span class="nav-text">Method</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Initialization"><span class="nav-number">1.1.2.</span> <span class="nav-text">Initialization</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Iteration"><span class="nav-number">1.1.3.</span> <span class="nav-text">Iteration</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Conversions"><span class="nav-number">1.1.4.</span> <span class="nav-text">Conversions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sort"><span class="nav-number">1.1.5.</span> <span class="nav-text">Sort</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Remove-Duplicate-Elements"><span class="nav-number">1.1.6.</span> <span class="nav-text">Remove Duplicate Elements</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Static-Import"><span class="nav-number">2.</span> <span class="nav-text">Static Import</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JAVA-COLLECTIONS"><span class="nav-number">1.</span> <span class="nav-text">JAVA COLLECTIONS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayList"><span class="nav-number">1.1.</span> <span class="nav-text">ArrayList</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Method"><span class="nav-number">1.1.1.</span> <span class="nav-text">Method</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Initialization"><span class="nav-number">1.1.2.</span> <span class="nav-text">Initialization</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Iteration"><span class="nav-number">1.1.3.</span> <span class="nav-text">Iteration</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Conversions"><span class="nav-number">1.1.4.</span> <span class="nav-text">Conversions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sort"><span class="nav-number">1.1.5.</span> <span class="nav-text">Sort</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Remove-Duplicate-Elements"><span class="nav-number">1.1.6.</span> <span class="nav-text">Remove Duplicate Elements</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Comparable-amp-Comparator"><span class="nav-number">1.2.</span> <span class="nav-text">Comparable & Comparator</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Static-Import"><span class="nav-number">2.</span> <span class="nav-text">Static Import</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Polymorphism"><span class="nav-number">3.</span> <span class="nav-text">Polymorphism</span></a></li></ol></div>
             
 
           </div>
