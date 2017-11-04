@@ -1,0 +1,1014 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Java," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="JAVA COLLECTIONSArrayList参考链接 🔗  继承自List接口，允许添加多个null元素及重复元素，并保持元素插入顺序  Example: 1234567891011121314151617181920212223import java.util.ArrayList;public class Main &amp;#123;     public static void main(S">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Basic Knowledge about Java">
+<meta property="og:url" content="https://lwxwl.github.io/2017/10/11/Basic Knowledge about Java/index.html">
+<meta property="og:site_name" content="lwxwl&#39;s blog">
+<meta property="og:description" content="JAVA COLLECTIONSArrayList参考链接 🔗  继承自List接口，允许添加多个null元素及重复元素，并保持元素插入顺序  Example: 1234567891011121314151617181920212223import java.util.ArrayList;public class Main &amp;#123;     public static void main(S">
+<meta property="og:updated_time" content="2017-11-04T08:02:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Basic Knowledge about Java">
+<meta name="twitter:description" content="JAVA COLLECTIONSArrayList参考链接 🔗  继承自List接口，允许添加多个null元素及重复元素，并保持元素插入顺序  Example: 1234567891011121314151617181920212223import java.util.ArrayList;public class Main &amp;#123;     public static void main(S">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://lwxwl.github.io/2017/10/11/Basic Knowledge about Java/"/>
+
+
+
+
+
+  <title>Basic Knowledge about Java | lwxwl's blog</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">lwxwl's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">To Be A Better Man</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://lwxwl.github.io/2017/10/11/Basic Knowledge about Java/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lwxwl">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lwxwl's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Basic Knowledge about Java</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-11T00:00:00+08:00">
+                2017-10-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="JAVA-COLLECTIONS"><a href="#JAVA-COLLECTIONS" class="headerlink" title="JAVA COLLECTIONS"></a>JAVA COLLECTIONS</h2><h3 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h3><p>参考链接 <a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html" target="_blank" rel="external">🔗</a></p>
+<blockquote>
+<p>继承自<code>List</code>接口，允许添加多个null元素及重复元素，并保持元素插入顺序</p>
+</blockquote>
+<p>Example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">import java.util.ArrayList;</div><div class="line"></div><div class="line">public class Main &#123;</div><div class="line">     public static void main(String[] args) &#123;</div><div class="line">         ArrayList&lt;String&gt; arrayList = new ArrayList&lt;&gt;();</div><div class="line">         arrayList.add(&quot;Oh&quot;);</div><div class="line">         arrayList.add(&quot;my&quot;);</div><div class="line">         arrayList.add(&quot;gosh&quot;);</div><div class="line">         System.out.println(arrayList);</div><div class="line"></div><div class="line">         arrayList.add(0, &quot;What&apos;s&quot;);</div><div class="line">         arrayList.add(1, &quot;the&quot;);</div><div class="line">         arrayList.add(2, &quot;fuck&quot;);</div><div class="line">         System.out.println(arrayList);</div><div class="line"></div><div class="line">         arrayList.remove(&quot;Oh&quot;);</div><div class="line">         System.out.println(arrayList);</div><div class="line"></div><div class="line">         arrayList.remove(0);</div><div class="line">         arrayList.remove(1);</div><div class="line">         System.out.println(arrayList);</div><div class="line">     &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[Oh, my, gosh]</div><div class="line">[What&apos;s, the, fuck, Oh, my, gosh]</div><div class="line">[What&apos;s, the, fuck, my, gosh]</div><div class="line">[the, my, gosh]</div></pre></td></tr></table></figure>
+<p>执行arrayList.remove(0)后，位于0的新的元素是”the”，所以执行arrayList.remove(1)删除的是”fuck”。如果要按顺序删除的话，一直执行arrayList.remove(0)即可</p>
+<h4 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h4><ul>
+<li><code>add(Object o)</code></li>
+</ul>
+<blockquote>
+<p>在末端添加新元素o</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arrayList.add(&quot;Oh&quot;);</div></pre></td></tr></table></figure>
+<ul>
+<li><code>add(int index, Object o)</code></li>
+</ul>
+<blockquote>
+<p>在指定位置添加元素o</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arrayList.add(2, &quot;fuck&quot;);  // 2nd index, 3rd position</div></pre></td></tr></table></figure>
+<p>除此之外，还可以添加元素的集合到<code>ArrayList</code>中，方法是：<code>addAll(Collection C)</code>和<code>addAll(int index, Collection C)</code>。</p>
+<ul>
+<li><code>remove(Object o)</code></li>
+</ul>
+<blockquote>
+<p>删除元素o</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arrayList.remove(&quot;Oh&quot;);</div></pre></td></tr></table></figure>
+<ul>
+<li><code>remove(int index)</code></li>
+</ul>
+<blockquote>
+<p>删除指定位置的元素</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arrayList.remove(0);  // index 0, 1st element of the list</div></pre></td></tr></table></figure>
+<ul>
+<li><code>set(int index, Object o)</code></li>
+</ul>
+<blockquote>
+<p>替换指定位置的元素</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arrayList.set(0, &quot;wow&quot;);</div></pre></td></tr></table></figure>
+<ul>
+<li><code>int indexOf(Object o)</code></li>
+</ul>
+<blockquote>
+<p>返回元素o的索引，如果元素不存在则返回-1</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">int pos = arrayList.indexOf(&quot;Oh&quot;);</div></pre></td></tr></table></figure>
+<ul>
+<li><code>Object get(int index)</code></li>
+</ul>
+<blockquote>
+<p>返回特定位置上的元素</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">String string = arrayList.get(0);</div></pre></td></tr></table></figure>
+<ul>
+<li><code>int size()</code></li>
+</ul>
+<blockquote>
+<p>返回<code>ArrayList</code>的长度，即其中的元素个数</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">int num = arrayList.size();</div></pre></td></tr></table></figure>
+<ul>
+<li><code>boolean contains(Object o)</code></li>
+</ul>
+<blockquote>
+<p>检查是否存在元素o，返回true／false</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arrayList.contains(&quot;oh&quot;);</div></pre></td></tr></table></figure>
+<ul>
+<li><code>clear()</code></li>
+</ul>
+<blockquote>
+<p>清空所有元素</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arrayList.clear();</div></pre></td></tr></table></figure>
+<h4 id="Initialization"><a href="#Initialization" class="headerlink" title="Initialization"></a>Initialization</h4><ul>
+<li><strong>Method 1: Initialization with Arrays.asList()</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ArrayList&lt;Type&gt; obj = new ArrayList&lt;Type&gt;(</div><div class="line">        Arrays.asList(Object o1, Object o2, Object o3, ...));</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>Method 2: Anonymous inner class method to initialize ArrayList</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ArrayList&lt;T&gt; obj = new ArrayList&lt;T&gt;()&#123;&#123;</div><div class="line">		   add(Object o1);</div><div class="line">		   add(Object o2);</div><div class="line">		   add(Object o3);</div><div class="line">		   ...</div><div class="line">		   &#125;&#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>Method3: Normal way of ArrayList initialization</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ArrayList&lt;T&gt; obj = new ArrayList&lt;T&gt;();</div><div class="line">	   obj.add(&quot;Object o1&quot;);</div><div class="line">	   obj.add(&quot;Object o2&quot;);</div><div class="line">	   obj.add(&quot;Object o3&quot;);</div><div class="line">	   ...</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>Method 4: Use Collections.ncopies</strong></li>
+</ul>
+<p>给所有元素赋相同的值时适用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ArrayList&lt;T&gt; obj = new ArrayList&lt;T&gt;(Collections.nCopies(count, element));</div></pre></td></tr></table></figure>
+<h4 id="Iteration"><a href="#Iteration" class="headerlink" title="Iteration"></a>Iteration</h4><ul>
+<li><strong>For Loop</strong></li>
+<li><strong>Foreach Loop</strong></li>
+<li><strong>While Loop</strong></li>
+<li><strong>Iterator</strong></li>
+<li><strong>Enumeration</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">public class Main &#123;</div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        ArrayList&lt;String&gt; arrayList = new ArrayList&lt;&gt;();</div><div class="line">        arrayList.add(&quot;Oh&quot;);</div><div class="line">        arrayList.add(&quot;my&quot;);</div><div class="line">        arrayList.add(&quot;gosh&quot;);</div><div class="line"></div><div class="line">        // For Loop</div><div class="line">        for (int i = 0; i &lt; arrayList.size(); i++) &#123;</div><div class="line">            System.out.println(arrayList.get(i));</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // Foreach Loop</div><div class="line">        for (String str : arrayList) &#123;</div><div class="line">            System.out.println(str);</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        // forEach()</div><div class="line">        arrayList.forEach(array -&gt; System.out.println(array));</div><div class="line">        arrayList.forEach(System.out::println);</div><div class="line"></div><div class="line">        // While Loop</div><div class="line">        int count = 0;</div><div class="line">        while (arrayList.size() &gt; count) &#123;</div><div class="line">            System.out.println(arrayList.get(count));</div><div class="line">            count++;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // Iterator</div><div class="line">        Iterator iterator = arrayList.iterator();</div><div class="line">        while (iterator.hasNext()) &#123;</div><div class="line">            System.out.println(iterator.next());</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // Enumeration</div><div class="line">        Enumeration&lt;String&gt; enumeration = Collections.enumeration(arrayList);</div><div class="line">            System.out.println(enumeration.nextElement());</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>对于<code>ArrayList</code>来说，随机访问比较快。for循环中的<code>get()</code>方法，采用的是随机访问的方法；而iterator中的<code>next()</code>方法，采用的是顺序访问。因此，<code>ArrayList</code>适合用前者，而<code>LinkedList</code>则适合用后者。</p>
+<h4 id="Conversions"><a href="#Conversions" class="headerlink" title="Conversions"></a>Conversions</h4><ul>
+<li><code>ArrayList</code> ➣ <code>String Array</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// Convert to array - 1</div><div class="line">String[] arr = new String[arrayList.size()];</div><div class="line">for (int i = 0; i &lt; arrayList.size(); i++) &#123;</div><div class="line">    arr[i] = arrayList.get(i);</div><div class="line">&#125;</div><div class="line"></div><div class="line">// Convert to array - 2</div><div class="line">String[] arr1 = arrayList.toArray(new String[arrayList.size()]);</div></pre></td></tr></table></figure>
+<ul>
+<li><code>Array</code> ➣ <code>ArrayList</code></li>
+</ul>
+<p>当然，最基础的就是直接添加：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">String str[] = &#123;&quot;s&quot;, &quot;t&quot;, &quot;r&quot;&#125;;</div><div class="line">ArrayList&lt;String&gt; arr = new ArrayList&lt;&gt;();</div><div class="line">for (int i = 0; i &lt; str.length; i++) &#123;</div><div class="line">    arr.add(str[i]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>但是还可以更简单一点 ☞</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">String str[] = &#123;&quot;s&quot;, &quot;t&quot;, &quot;r&quot;&#125;;</div><div class="line">ArrayList&lt;String&gt; arr = new ArrayList&lt;&gt;(Arrays.asList(str));</div></pre></td></tr></table></figure>
+<p>Or ☞</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">String str[] = &#123;&quot;s&quot;, &quot;t&quot;, &quot;r&quot;&#125;;</div><div class="line">ArrayList&lt;String&gt; arr = new ArrayList&lt;&gt;();</div><div class="line">Collections.addAll(arr, str);</div></pre></td></tr></table></figure>
+<ul>
+<li><code>LinkedList</code> ➣ <code>ArrayList</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">LinkedList&lt;String&gt; linkedList = new LinkedList&lt;&gt;();</div><div class="line">linkedList.add(&quot;main&quot;);</div><div class="line">linkedList.add(&quot;activity&quot;);</div><div class="line"></div><div class="line">List&lt;String&gt; list = new ArrayList&lt;&gt;(linkedList);</div></pre></td></tr></table></figure>
+<h4 id="Sort"><a href="#Sort" class="headerlink" title="Sort"></a>Sort</h4><ul>
+<li><strong>Collections.sort()</strong></li>
+</ul>
+<blockquote>
+<p>按照字母先后顺序或者数字从小到大的顺序排列</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">public class Main &#123;</div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        ArrayList&lt;String&gt; arrayList = new ArrayList&lt;&gt;();</div><div class="line">        arrayList.add(&quot;Oh&quot;);</div><div class="line">        arrayList.add(&quot;my&quot;);</div><div class="line">        arrayList.add(&quot;gosh&quot;);</div><div class="line"></div><div class="line">        Collections.sort(arrayList);</div><div class="line"></div><div class="line">        for (String str : arrayList) &#123;</div><div class="line">            System.out.println(str);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Oh</div><div class="line">gosh</div><div class="line">my</div></pre></td></tr></table></figure>
+<p>那么问题来了 ☞ 如何按照递减的顺序排列呢？</p>
+<ul>
+<li><strong>Collections.sort(arrayList, Collections.reverseOrder());</strong></li>
+</ul>
+<p>这样就是按照递减的方式排列了，或者也可以用以下方式代替 ☞</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Collections.sort(arrayList);</div><div class="line">Collections.reverse(arrayList);</div></pre></td></tr></table></figure>
+<p>当然，以上两种适用于简单的数据的排序，当<code>ArrayList</code>的存放的数据类型变得更为复杂时呢？</p>
+<p>Emmm……比如说这样 ☞</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">class Book  &#123;</div><div class="line">    private String name;</div><div class="line">    private int time;</div><div class="line">    private int pages;</div><div class="line"></div><div class="line">    public Book(String name, int time, int pages) &#123;</div><div class="line">         this.name = name;</div><div class="line">         this.time = time;</div><div class="line">         this.pages = pages;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public String getName() &#123;</div><div class="line">         return name;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void setName(String name) &#123;</div><div class="line">         this.name = name;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public int getTime() &#123;</div><div class="line">         return time;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void setTime(int time) &#123;</div><div class="line">         this.time = time;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public int getPages() &#123;</div><div class="line">         return pages;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void setPages(int pages) &#123;</div><div class="line">         this.pages = pages;</div><div class="line">    &#125;	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>我们已经定义了一种新的数据类型<code>Book</code>，现在用<code>ArrayList</code>来存放数据 ☞</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">public class Main &#123;</div><div class="line">    public static void main(String args[])&#123;</div><div class="line">         ArrayList&lt;Book&gt; arrayList = new ArrayList&lt;&gt;();</div><div class="line">         arrayList.add(new Book(&quot;ABC&quot;, 223, 26));</div><div class="line">         arrayList.add(new Book(&quot;DEF&quot;, 245, 24));</div><div class="line">         arrayList.add(new Book(&quot;GHI&quot;, 557, 32));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>现在再用之前的方法肯定是行不通了，试试借助其他办法 ☞</p>
+<ul>
+<li><strong>Comparable</strong></li>
+</ul>
+<p>通过重写<code>Comparable</code>接口的<code>compareTo()</code>方法，来比较排序。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">class Book implements Comparable&lt;Book&gt; &#123;</div><div class="line">    private String name;</div><div class="line">    private int time;</div><div class="line">    private int pages;</div><div class="line"></div><div class="line">    public Book(String name, int time, int pages) &#123;</div><div class="line">         this.name = name;</div><div class="line">         this.time = time;</div><div class="line">         this.pages = pages;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    ...</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public int compareTo(Book book) &#123;</div><div class="line">         int page =((Book)book).getPages();</div><div class="line">         // For ascending order</div><div class="line">         return this.pages - page;</div><div class="line">         // For descending order</div><div class="line">         // return page - this.pages;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public String toString() &#123;</div><div class="line">         return &quot;[ name = &quot; + name + &quot;, time = &quot; + time + &quot;, pages = &quot; + pages + &quot;]&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">public class Main &#123;</div><div class="line">    public static void main(String args[]) &#123;</div><div class="line">         ArrayList&lt;Book&gt; arrayList = new ArrayList&lt;&gt;();</div><div class="line">         arrayList.add(new Book(&quot;ABC&quot;, 223, 26));</div><div class="line">         arrayList.add(new Book(&quot;DEF&quot;, 245, 24));</div><div class="line">         arrayList.add(new Book(&quot;GHI&quot;, 557, 32));</div><div class="line">         Collections.sort(arrayList);</div><div class="line">         for (Book str : arrayList) &#123;</div><div class="line">            System.out.println(str);</div><div class="line">         &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[ name = DEF, time = 245, pages = 24]</div><div class="line">[ name = ABC, time = 223, pages = 26]</div><div class="line">[ name = GHI, time = 557, pages = 32]</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>Comparator</strong></li>
+</ul>
+<p>或者我们可以重写<code>Comparator</code>接口中的<code>compare()</code>方法来排序。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">class Book &#123;</div><div class="line">    private String name;</div><div class="line">    private int time;</div><div class="line">    private int pages;</div><div class="line"></div><div class="line">    public Book(String name, int time, int pages) &#123;</div><div class="line">        this.name = name;</div><div class="line">        this.time = time;</div><div class="line">        this.pages = pages;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    ...</div><div class="line"></div><div class="line">    public static Comparator&lt;Book&gt; compareName = new Comparator&lt;Book&gt;() &#123;</div><div class="line">        @Override</div><div class="line">        public int compare(Book o1, Book o2) &#123;</div><div class="line">            String name1 = o1.getName();</div><div class="line">            String name2 = o2.getName();</div><div class="line">            // String name = o.getName().toUpperCase();</div><div class="line"></div><div class="line">            // For ascending order</div><div class="line">            return name1.compareTo(name2);</div><div class="line"></div><div class="line">            // For descending order</div><div class="line">            // return name2.compareTo(name1);</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    public static Comparator&lt;Book&gt; compareTime = new Comparator&lt;Book&gt;() &#123;</div><div class="line">        @Override</div><div class="line">        public int compare(Book o1, Book o2) &#123;</div><div class="line">            int time1 = o1.getTime();</div><div class="line">            int time2 = o2.getTime();</div><div class="line"></div><div class="line">            return time1 - time2;</div><div class="line">            // return time2 - time1;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public String toString() &#123;</div><div class="line">        return &quot;[ name = &quot; + name + &quot;, time = &quot; + time + &quot;, pages = &quot; + pages + &quot;]&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">public class Main &#123;</div><div class="line">    public static void main(String args[]) &#123;</div><div class="line">        ArrayList&lt;Book&gt; arrayList = new ArrayList&lt;&gt;();</div><div class="line">        arrayList.add(new Book(&quot;ABC&quot;, 223, 26));</div><div class="line">        arrayList.add(new Book(&quot;DEF&quot;, 245, 24));</div><div class="line">        arrayList.add(new Book(&quot;GHI&quot;, 557, 32));</div><div class="line"></div><div class="line">        Collections.sort(arrayList, Book.compareName);</div><div class="line">        System.out.println(&quot;Sorted by name&quot;);</div><div class="line">        for (Book str : arrayList) &#123;</div><div class="line">            System.out.println(str);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        System.out.println(&quot;Sorted by time&quot;);</div><div class="line">        Collections.sort(arrayList, Book.compareTime);</div><div class="line">        for (Book str : arrayList) &#123;</div><div class="line">            System.out.println(str);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Sorted by name</div><div class="line">[ name = ABC, time = 223, pages = 26]</div><div class="line">[ name = DEF, time = 245, pages = 24]</div><div class="line">[ name = GHI, time = 557, pages = 32]</div><div class="line">Sorted by time</div><div class="line">[ name = ABC, time = 223, pages = 26]</div><div class="line">[ name = DEF, time = 245, pages = 24]</div><div class="line">[ name = GHI, time = 557, pages = 32]</div></pre></td></tr></table></figure>
+<h4 id="Remove-Duplicate-Elements"><a href="#Remove-Duplicate-Elements" class="headerlink" title="Remove Duplicate Elements"></a>Remove Duplicate Elements</h4><ul>
+<li><strong><code>HashSet</code></strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">public class Main &#123;</div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        ArrayList&lt;String&gt; arrayList = new ArrayList&lt;&gt;();</div><div class="line">        arrayList.add(&quot;The&quot;);</div><div class="line">        arrayList.add(&quot;road&quot;);</div><div class="line">        arrayList.add(&quot;not&quot;);</div><div class="line">        arrayList.add(&quot;not&quot;);</div><div class="line">        arrayList.add(&quot;taken&quot;);</div><div class="line">        HashSet&lt;String&gt; hashSet = new HashSet&lt;&gt;(arrayList);</div><div class="line">        ArrayList&lt;String&gt; arrayList1 = new ArrayList&lt;&gt;(hashSet);</div><div class="line">        System.out.println(arrayList1);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>输出：</p>
+<blockquote>
+<p>[The, not, road, taken]</p>
+</blockquote>
+<p>删除重复元素之后，元素插入顺序会被打乱。</p>
+<ul>
+<li><strong><code>LinkedHashSet</code></strong></li>
+</ul>
+<p><code>LinkedHashSet</code>不允许重复元素，并且会保持元素的顺序。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">public class Main &#123;</div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        ArrayList&lt;String&gt; arrayList = new ArrayList&lt;&gt;();</div><div class="line">        arrayList.add(&quot;The&quot;);</div><div class="line">        arrayList.add(&quot;road&quot;);</div><div class="line">        arrayList.add(&quot;not&quot;);</div><div class="line">        arrayList.add(&quot;not&quot;);</div><div class="line">        arrayList.add(&quot;taken&quot;);</div><div class="line">        LinkedHashSet&lt;String&gt; linkedHashSet = new LinkedHashSet&lt;&gt;(arrayList);</div><div class="line">        ArrayList&lt;String&gt; arrayList1 = new ArrayList&lt;&gt;(linkedHashSet);</div><div class="line">        System.out.println(arrayList1);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>输出：</p>
+<blockquote>
+<p>[The, road, not, taken]</p>
+</blockquote>
+<h3 id="Comparable-amp-Comparator"><a href="#Comparable-amp-Comparator" class="headerlink" title="Comparable &amp; Comparator"></a>Comparable &amp; Comparator</h3><p>在之前的<code>ArrayList</code>的排序中就已经用到了这两个接口来进行比较排序，这里主要写两者的区别。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">Comparable</th>
+<th style="text-align:center">Comparator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Package</td>
+<td style="text-align:center">java.lang.Comparable</td>
+<td style="text-align:center">java.util.Comparator</td>
+</tr>
+<tr>
+<td style="text-align:center">Implementation</td>
+<td style="text-align:center">Class whose objects to be sorted must implement this interface</td>
+<td style="text-align:center">Class whose objects to be sorted do not need to implement this interface</td>
+</tr>
+<tr>
+<td style="text-align:center">Sorting Method</td>
+<td style="text-align:center"><strong><code>int compareTo(Object o1)</code></strong> This method compares this object with o1 object and returns a integer. Its value: <code>positive</code> ➣ this object &gt; o1; <code>zero</code> ➣ this object = o1; <code>negative</code> ➣ this object &lt; o1</td>
+<td style="text-align:center"><strong><code>int cpmpare(Object o1, Object o2)</code></strong> This method compares o1 with o2 and returns a integer. Its value: <code>positive</code> ➣ o1 &gt; o2; <code>zero</code> ➣ o1 = o2; <code>negative</code> ➣ o1 &lt; o2</td>
+</tr>
+<tr>
+<td style="text-align:center">Calling Method</td>
+<td style="text-align:center"><strong><code>Collections.sort(List)</code></strong></td>
+<td style="text-align:center"><strong><code>Collections.sort(List, Comparator)</code></strong></td>
+</tr>
+<tr>
+<td style="text-align:center">Sorting Logic</td>
+<td style="text-align:center">Sorting logic must be in same class whose objects are being sorted</td>
+<td style="text-align:center">Sorting logic is in seperate class</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Java-迭代器"><a href="#Java-迭代器" class="headerlink" title="Java 迭代器"></a>Java 迭代器</h3><p>迭代器是一个轻量级对象，可以遍历并选择序列中的对象。</p>
+<blockquote>
+<p>将遍历序列的操作与底层序列的结构分离，统一了对容器的访问方式。</p>
+</blockquote>
+<h4 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h4><p><strong>Iterator</strong></p>
+<p>只能单向移动，在遍历的时候不允许在底层集合进行增删元素的操作（通过迭代器本身操作除外）。</p>
+<ul>
+<li><code>boolean hasNext()</code></li>
+</ul>
+<blockquote>
+<p>判断是否有更多元素</p>
+</blockquote>
+<ul>
+<li><code>E next()</code></li>
+</ul>
+<blockquote>
+<p>返回下一个元素</p>
+</blockquote>
+<p>如果没有下一个元素，则抛出<code>NoSuchElementException</code>异常。</p>
+<ul>
+<li><code>void remove()</code></li>
+</ul>
+<blockquote>
+<p>删除迭代器返回的底层集合的最后一个元素，只能在每次调用<code>next()</code>方法后使用一次</p>
+</blockquote>
+<p>如果调用的不是迭代器中删除元素的方法，而是通过底层集合自带的删除元素的方法，会抛出<code>UnsupportedOperationException</code>异常。</p>
+<p>如果在调用之前没有返回元素，会抛出<code>IllegalStateException</code>异常。</p>
+<p><strong>ListIterator</strong></p>
+<p><code>Iterator</code>的子类，只能访问各种<code>List</code>类，但是功能更加强大，可以双向移动。</p>
+<ul>
+<li><p><code>void add(E e)</code></p>
+</li>
+<li><p><code>boolean hasNext()</code></p>
+</li>
+<li><p><code>boolean hasPrevious()</code></p>
+</li>
+<li><p><code>E next()</code></p>
+</li>
+<li><p><code>int nextIndex()</code></p>
+</li>
+<li><p><code>E previous()</code></p>
+</li>
+<li><p><code>int previousIndex()</code></p>
+</li>
+<li><p><code>void remove()</code></p>
+</li>
+<li><p><code>void set(E e)</code></p>
+</li>
+</ul>
+<p><strong>Iterator 和 Enumeration 的区别</strong></p>
+<blockquote>
+<p>Iterator允许在遍历的时候删除底层集合的元素</p>
+</blockquote>
+<p>除此之外，就是方法命名更加规范，用<code>hasNext()</code>替代了<code>hasMoreElements()</code>，用<code>next()</code>替代了<code>nextElement()</code>。</p>
+<h4 id="迭代器接口"><a href="#迭代器接口" class="headerlink" title="迭代器接口"></a>迭代器接口</h4><p>迭代器有<code>Iterator</code>和<code>Iterable</code>两个接口。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">public interface Iterable&lt;T&gt; &#123;</div><div class="line">    Iterator&lt;T&gt; iterator();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">public interface Iterator&lt;E&gt; &#123;</div><div class="line">    boolean hasNext();</div><div class="line">    E next();</div><div class="line">    void remove();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>Iterable</code>是<code>Iterator</code>接口的包装，超级接口，实现上更简洁，并且可以允许实现此接口的对象成为foreach语句的目标。除此之外，<code>Iterable</code>每次调用时返回一个从头开始的迭代器，多个迭代器之间互不干扰，不会出现当前迭代位置混乱的不可预知错误。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">public class Main implements Iterable&lt;Book&gt; &#123;</div><div class="line">    private final List&lt;Book&gt; bList = new ArrayList&lt;&gt;();</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public Iterator&lt;Book&gt; iterator() &#123;</div><div class="line">        return new Iterator&lt;Book&gt; () &#123;</div><div class="line">            private final Iterator&lt;Book&gt; iter = bList.iterator();</div><div class="line"></div><div class="line">            @Override</div><div class="line">            public boolean hasNext() &#123;</div><div class="line">                return iter.hasNext();</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            @Override</div><div class="line">            public Book next() &#123;</div><div class="line">                return iter.next();</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            @Override</div><div class="line">            public void remove() &#123;</div><div class="line">                throw new UnsupportedOperationException(&quot;no changes allowed&quot;);</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Static-Import"><a href="#Static-Import" class="headerlink" title="Static Import"></a>Static Import</h2><blockquote>
+<p>import static com…ClassName.*（／静态方法名）;</p>
+</blockquote>
+<p>替换<code>import com...ClassName</code>，在使用的时候可以直接用方法名调用静态方法，而不用通过<code>ClassName.方法名</code>的方式。</p>
+<p>Without Static Imports ☞</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public class Main &#123;</div><div class="line"></div><div class="line">    public static void main(String[] args) &#123;</div><div class="line"></div><div class="line">        double a = Math.sqrt(4);</div><div class="line">        System.out.print(a);</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Using Static Imports ☞</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">import static java.lang.Math.*;</div><div class="line">import static java.lang.System.out;</div><div class="line"></div><div class="line">public class Main &#123;</div><div class="line"></div><div class="line">    public static void main(String[] args) &#123;</div><div class="line"></div><div class="line">        double a = sqrt(4);</div><div class="line">        out.print(a);</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Polymorphism"><a href="#Polymorphism" class="headerlink" title="Polymorphism"></a>Polymorphism</h2><p>Explain polymorphism in one sentence ➣</p>
+<blockquote>
+<p>Subclasses of a class can define their own unique behaviors and yet share some of the same functionality of the parents.</p>
+</blockquote>
+<p>未完待续。。。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/31/《Thinking in Java》读书笔记/" rel="next" title="《Thinking in Java》读书笔记">
+                <i class="fa fa-chevron-left"></i> 《Thinking in Java》读书笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/27/新人任务（第一周至第三周）/" rel="prev" title="新人任务（第一周至第三周）">
+                新人任务（第一周至第三周） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="lwxwl" />
+          <p class="site-author-name" itemprop="name">lwxwl</p>
+           
+              <p class="site-description motion-element" itemprop="description">好好学习，天天向上(๑•̀ㅂ•́)و✧</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lwxwl" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/_lwxwl_" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://m.weibo.cn/u/5318684652" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JAVA-COLLECTIONS"><span class="nav-number">1.</span> <span class="nav-text">JAVA COLLECTIONS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayList"><span class="nav-number">1.1.</span> <span class="nav-text">ArrayList</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Method"><span class="nav-number">1.1.1.</span> <span class="nav-text">Method</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Initialization"><span class="nav-number">1.1.2.</span> <span class="nav-text">Initialization</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Iteration"><span class="nav-number">1.1.3.</span> <span class="nav-text">Iteration</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Conversions"><span class="nav-number">1.1.4.</span> <span class="nav-text">Conversions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sort"><span class="nav-number">1.1.5.</span> <span class="nav-text">Sort</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Remove-Duplicate-Elements"><span class="nav-number">1.1.6.</span> <span class="nav-text">Remove Duplicate Elements</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Comparable-amp-Comparator"><span class="nav-number">1.2.</span> <span class="nav-text">Comparable & Comparator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-迭代器"><span class="nav-number">1.3.</span> <span class="nav-text">Java 迭代器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#迭代器"><span class="nav-number">1.3.1.</span> <span class="nav-text">迭代器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#迭代器接口"><span class="nav-number">1.3.2.</span> <span class="nav-text">迭代器接口</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Static-Import"><span class="nav-number">2.</span> <span class="nav-text">Static Import</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Polymorphism"><span class="nav-number">3.</span> <span class="nav-text">Polymorphism</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lwxwl</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+<script type="text/javascript" color="176,23,31" opacity='1' zIndex="-1" count="66" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+
+</body>
+</html>
